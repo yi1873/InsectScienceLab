@@ -13,6 +13,7 @@ Information
 cd
 --------------------
 cd：Change directory
+
 修改工作目录，cd和ls应该是使用最多的两个命令，尤其是对于Linux目录结构不熟的用户。
 
 ``` 
@@ -46,6 +47,7 @@ $pwd
 sh
 ---
 script
+
 运行脚本的命令，脚本是包含很多命令的一个文件，sh 这个文件，就可以之和运行，例如目录下有个多个sh文件，就可以一次运行。
 
 ```
@@ -55,6 +57,7 @@ sh example.sh
 cp
 ---
 cp: Copy file
+
 拷贝并粘贴文件
 ```
 cp a1.index.sh a2.index.sh  
@@ -63,6 +66,7 @@ cp a1.index.sh a2.index.sh
 mv
 ---
 mv: Move file
+
 移动文件，相当于windows下的剪切粘贴，如果剪切粘贴到同一目录下，则为重命令。
 ```
 mv a1.index.sh ../          # 移动至上级目录
@@ -72,11 +76,17 @@ mv a1.index.sh a2.index.sh  # 重命名为a2.index.sh
 rm
 ---
 rm: Remove file
+
 删除文件
+
 -r  删除文件夹
+
 -f  删除不提示
+
 -i  删除提示
+
 -v  详细显示进行步骤
+
 注意！命令行模式下删除文件不可恢复。
 ```
 rm -rf *.fna  #删除目录下所有以.fna结尾的文件
@@ -85,7 +95,9 @@ rm -rf *.fna  #删除目录下所有以.fna结尾的文件
 ln
 ---
 ln: Link files
+
 创建连接文件，包括软连接和硬链接，一般软连接比较常用，相当于windows下的快捷方式。
+
 -s  建立软连接   
 ```
 ln -s /home/users/example ./ #当前目录下创建一个快捷方式
@@ -94,9 +106,13 @@ ln -s /home/users/example ./ #当前目录下创建一个快捷方式
 mkdir
 ---
 mkdir：Make directory
+
 创建文件夹
+
 -p  递归创建目录，若父目录不存在则依次创建
+
 -m  自定义创建目录的权限 
+
 -v  显示创建目录的详细信息
 ```
 mkdir rnaseq #创建一个名为rnaseq的目录
@@ -106,8 +122,11 @@ mkdir -p rnaseq/readscount  # 创建rnaseq目录和其子目录readscount
 less
 ---
 less和more都是文件查看工具，但是less功能更多一些，在windows系统下打开一个10G的文件比较困难，但是在Linux下非常方便，less可以打开非常大的文件，压缩格式也可以直接打开。
+
 -m  显示类似于more命令的百分比
+
 -N  显示行号
+
 -S  格式化显示
 ```
 less genome.fa  # 查看文件，按q退出
@@ -116,9 +135,10 @@ less -S genome.tar.gz  # 可查看压缩文件
 
 cat
 --------------------
-
 cat: concatenate 连接
+
 cat的一个作用是查看文件，一般是比较小的文件，行数小于一个屏幕，最多不要超过两个屏幕，否则会刷屏；
+
 cat另一个作用是合并多个文件，一般配合重定向合并为一个新文件或者将一个文件内容追加到另一个文件结尾。
 ```
 cat a1.index.sh  # 将文件打印至屏幕,文件较少行数时可使用；一般推荐less查看；
@@ -136,6 +156,7 @@ $ head -40 a.txt | tail -n 20    # '|'为管道符，可理解为下一步 (管�
 g(un)zip/ b(un)zip2
 ---
 gzip和bzip2是文件压缩工具，默认直接对源文件进行处理，压缩比率在2/3左右，都可以进行设置。
+
 加上un，为unpack的意思，表示解压缩。
 ```
 gzip a.txt # 压缩文件 
@@ -145,15 +166,25 @@ gunzip a.txt.gz # 解压缩文件
 tar
 ---
 tar：Tape archive （磁带档案）
+
 tar是一个比较复杂的命令，tar主要用于打包，由于tar能调用gzip或者bzip2进行压缩，而打包和压缩经常如windows系统一样合并为一个过程，新手经常将二者混淆，
+
   -c  建立打包档案，可搭配 -v 来察看过程中被打包的档名(filename)
+
   -t  察看打包档案的内容含有哪些档名，重点在察看『档名』就是了；
+
   -x  解打包或解压缩的功能，可以搭配 -C (大写) 在特定目录解开
+
 辅选项：
+
   -j  透过 bzip2 的支持进行压缩/解压缩：此时档名最好为 *.tar.bz2
+
   -z  透过 gzip 的支持进行压缩/解压缩：此时档名最好为 *.tar.gz
+
   -v  在压缩/解压缩的过程中，将正在处理的文件名显示出来！
+
   -f filename -f 后面要立刻接要被处理的档名！
+
 对于初学者，记住c是creat，创建，x是解包，z对应gzip，j对应bzip2即可，所以常用的命令如下：
 ```
 tar -jcvf filename.tar.bz2 A B C #打包压缩为bz2结尾文件
@@ -164,10 +195,15 @@ tar -zxvf filename.tar.gz # 解压缩.tar.gz 结尾文件
 sort
 ---
 排序，默认按第一列排序，可以通过-k进行设置；默认排序规则为按ASCII码排序，可以通过-n进行修改；-r取相反方向；
+
 -n   依照数值的大小排序。
+
 -o   将排序后的结果存入指定的文件。
+
 -r   以相反的顺序来排序。
+
 -t   指定排序时所用的栏位分隔字符。
+
 -k   选择以哪个区间进行排序。
 
 grep
@@ -185,10 +221,15 @@ ps -fx | grep -v "S"
 wc
 ---
 wc = Word Count
+
 统计一个文件中，行数，单词数，字符数
+
 -l filename 报告行数
+
 -c filename 报告字节数
+
 -m filename 报告字符数
+
 -w filename 报告单词数
 ```
 less  test.fa|grep '>'|wc -l # 统计文件中有多少序列；grep用于提取特征值；fasta格式序列以‘>’开头，故提取'>'计数即可
@@ -197,6 +238,7 @@ less  test.fa|grep '>'|wc -l # 统计文件中有多少序列；grep用于提取
 sed
 ---
 sed = Stream Editor
+
 流处理器，sed有非常强大的功能.
 ```
 #案例一：输出固定的行
@@ -288,11 +330,12 @@ awk '{getline seq;getline plus;getline qual;sub("@",">",$0);print $0 "\n"seq}'
 
 vim
 ---
+```
 vim是Linux系统自带的文本编辑器，可以理解成为windows系统下的word软件。
-
-:w filename 将文章以指定的文件名保存起来  
+:w filename 将文章以指定的文件名保存起来
 :wq 保存并退出
 :q! 不保存而强制退出
+
 命令行模式功能键
 1）插入模式
   按「i」切换进入插入模式「insert mode」，按"i"进入插入模式后是从光标当前位置开始输入文件；
@@ -301,6 +344,7 @@ vim是Linux系统自带的文本编辑器，可以理解成为windows系统下�
 
 2）从插入模式切换为命令行模式
 按「ESC」键。
+
 3）移动光标
 　　vi可以直接用键盘上的光标来上下左右移动，但正规的vi是用小写英文字母「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格。
 　　按「ctrl」+「b」：屏幕往"后"移动一页。
@@ -309,7 +353,7 @@ vim是Linux系统自带的文本编辑器，可以理解成为windows系统下�
 　　按「ctrl」+「d」：屏幕往"前"移动半页。
 　　按数字「0」：移到文章的开头。
 　　按「G」：移动到文章的最后。
-　　按「$」：移动到光标所在行的"行尾"。
+　　按「$」：移动到光标所在行的"行尾"
 　　按「^」：移动到光标所在行的"行首"
 　　按「w」：光标跳到下个字的开头
 　　按「e」：光标跳到下个字的字尾
@@ -345,4 +389,4 @@ vim是Linux系统自带的文本编辑器，可以理解成为windows系统下�
 9）跳至指定的行
 　　「ctrl」+「g」列出光标所在行的行号。
 　　「#G」：例如，「15G」，表示移动光标至文章的第15行行首。
-
+```
