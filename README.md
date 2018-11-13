@@ -4,12 +4,9 @@
 * 从 **入门** 到 **放弃** 系列
 * 不定期持续更新
 
-
 ## Linux
 * [生信常用到的linux命令](https://github.com/yi1873/InsectScienceLab/blob/master/linux/command_for_Bioinformatics/linux_commands.md)
 * [fastq2fasta awk实现](https://github.com/yi1873/InsectScienceLab/blob/master/linux/fastq2fasta/example.sh)
-
-
 
 ## perl scripts
 * select.pl
@@ -17,12 +14,17 @@
   [根据id提取序列信息](https://github.com/yi1873/InsectScienceLab/blob/master/perl/extract_seq_from_genome/example.sh)
 
   [根据id提取表格信息](https://github.com/yi1873/InsectScienceLab/blob/master/perl/extract_tab_from_tableinfo/example.sh)
+* [合并多个表格结果](https://github.com/yi1873/InsectScienceLab/blob/master/perl/merge_single_tab/example.sh)
+* [venn绘图](https://github.com/yi1873/InsectScienceLab/blob/master/perl/venn/example.sh)
 
+## python scripts
+* [split_fasta.py](https://github.com/yi1873/InsectScienceLab/blob/master/python/split_fasta/example.sh): 将fasta格式文件切成多份，在blast比对时可将文件切成多份同时比对，可加快比对速度；
 
 ## R 
 * Books
   [R for data science](https://github.com/yi1873/InsectScienceLab/tree/master/R/books)
-* heatmap # 待更
+* [heatmap](https://github.com/yi1873/InsectScienceLab/blob/master/R/heatmap/heatmap.md)
+* [Pearson correlation between samples](https://github.com/yi1873/InsectScienceLab/blob/master/R/correlation_plot/pearson_corr_plot.md) 
 
 
 ## 机器学习
