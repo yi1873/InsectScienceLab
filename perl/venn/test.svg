@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="576" width="600" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g>
+		<rect width="600" height="576" style="fill:#FFF;stroke-width:1;"/>
+	</g>
+
+	<g style="stroke-width: 1" transform="translate(200,373)">
+		<ellipse cx="0" cy="0" fill="lightcoral" rx="150" ry="150" stroke="lightcoral" fill-opacity="0.4"  />
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="0" y="0" >8</text>
+	</g>
+	<g style="stroke-opacity: 1; stroke-width: 1" transform="translate(400,373)">
+		<ellipse cx="0" cy="0" fill="lightseagreen" rx="150" ry="150" stroke="lightseagreen" fill-opacity="0.4" />
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="0" y="0" >2</text>
+	</g>
+	<g style="stroke-opacity: 1; stroke-width: 1" transform="translate(300,200)">
+		<ellipse cx="0" cy="0" fill="cornflowerblue" rx="150" ry="150" stroke="cornflowerblue" fill-opacity="0.4"  />
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="0" y="0" >4</text>
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="70" y="70" >2</text>
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="-70" y="70" >1</text>
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="0" y="120" >2</text>
+		<text fill="black" font-family="Arial" font-size="18" stroke="none" text-anchor="middle" x="0" y="210" >0</text>
+		<text fill="black" font-family="Arial" font-size="20" stroke="none" text-anchor="middle" x="0" y="-80" >sample_1</text>
+		<text fill="black" font-family="Arial" font-size="20" stroke="none" text-anchor="middle" x="-150" y="240" >sample_2</text>
+		<text fill="black" font-family="Arial" font-size="20" stroke="none" text-anchor="middle" x="150" y="240" >sample_3</text>
+		<text fill="black" font-family="Arial" font-size="20" stroke="none" text-anchor="middle" x="0" y="370" ></text>
+	</g>
+</svg>
