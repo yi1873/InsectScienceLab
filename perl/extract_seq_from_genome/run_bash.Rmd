@@ -13,11 +13,12 @@ output: github_document
 
 ## 根据id提取基因序列
 
-```{bash, eval=F, echo = T, tidy = TRUE, size="small", cache=FALSE, warning=FALSE}
+```{bash, eval=T, echo = T, tidy = TRUE, size="small", cache=FALSE, warning=FALSE}
 perl select.pl -cls fa -l id.list -s genome.fa -o test.out.fa
 ```
 
 * 在该目录下会生成结果test.out.fa
+* perl warning 为设置环境变量问题，可忽略；下同
 
 ## 根据id按行提取tab格式信息
 
