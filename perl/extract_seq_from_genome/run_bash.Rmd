@@ -22,11 +22,11 @@ perl select.pl -cls fa -l id.list -s genome.fa -o test.out.fa
 ## 根据id按行提取tab格式信息
 
 * “\\”反斜杠用于命令换行，主要是为了命令可读性，实际为一条命令
-```{bash, eval=F, echo = T, tidy = TRUE, size="small", cache=FALSE, warning=FALSE}
+```{bash, eval=T, echo = T, tidy = TRUE, size="small", cache=FALSE, warning=FALSE}
 perl select.pl -cls line -l ../extract_tab_from_tableinfo/id.list \
-    -s ../extract_tab_from_tableinfo/species_taxonomy.txt \
-    -o ../extract_tab_from_tableinfotest.out.txt
+    -s ../extract_tab_from_tableinfo/species_taxonomy.txt  \
+    -o ../extract_tab_from_tableinfo/test.out.txt
 ```
 
-* 在该目录下会生成结果test.out.txt
+* 在extract_tab_from_tableinfo目录下会生成结果test.out.txt
 

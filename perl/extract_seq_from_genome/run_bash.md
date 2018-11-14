@@ -25,8 +25,16 @@ perl select.pl -cls fa -l id.list -s genome.fa -o test.out.fa
 
 ``` bash
 perl select.pl -cls line -l ../extract_tab_from_tableinfo/id.list \
-    -s ../extract_tab_from_tableinfo/species_taxonomy.txt \
-    -o ../extract_tab_from_tableinfotest.out.txt
+    -s ../extract_tab_from_tableinfo/species_taxonomy.txt  \
+    -o ../extract_tab_from_tableinfo/test.out.txt
 ```
 
--   在该目录下会生成结果test.out.txt
+    ## perl: warning: Setting locale failed.
+    ## perl: warning: Please check that your locale settings:
+    ##  LC_ALL = (unset),
+    ##  LC_CTYPE = "en_CN.UTF-8",
+    ##  LANG = "en_CN.UTF-8"
+    ##     are supported and installed on your system.
+    ## perl: warning: Falling back to the standard locale ("C").
+
+-   在extract\_tab\_from\_tableinfo目录下会生成结果test.out.txt
