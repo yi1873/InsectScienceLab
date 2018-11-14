@@ -21,6 +21,7 @@
 * [split_fasta.py](https://github.com/yi1873/InsectScienceLab/blob/master/python/split_fasta/example.sh): 将fasta格式文件切成多份，在blast比对时可将文件切成多份同时比对，可加快比对速度；
 
 ## R 
+* Rmd为R markdown格式，用Rstudio可直接打开点击Knit运行；前提是将所依赖代码、文件放在同一目录；
 * Books
   [R for data science](https://github.com/yi1873/InsectScienceLab/tree/master/R/books)
 * [heatmap](https://github.com/yi1873/InsectScienceLab/blob/master/R/heatmap/heatmap.md)
