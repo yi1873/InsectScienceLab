@@ -15,7 +15,7 @@
 
   [根据id提取表格信息](https://github.com/yi1873/InsectScienceLab/blob/master/perl/extract_tab_from_tableinfo/example.sh)
 
-  [又get一项新技能, R markdown可直接运行bash命令](https://github.com/yi1873/InsectScienceLab/blob/master/perl/extract_seq_from_genome/run_bash.md)
+  [又get一项新技能, R markdown可直接运行bash/perl](https://github.com/yi1873/InsectScienceLab/blob/master/perl/extract_seq_from_genome/run_bash.md)
 * [合并多个表格结果](https://github.com/yi1873/InsectScienceLab/blob/master/perl/merge_single_tab/example.sh)
 * [venn绘图](https://github.com/yi1873/InsectScienceLab/blob/master/perl/venn/example.sh)
 
