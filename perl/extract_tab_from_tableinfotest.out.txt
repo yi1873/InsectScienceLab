@@ -1,0 +1,11 @@
+Taxid	Organism_name	Superkingdom	Kingdom	Phylum	Class	Order	Family	Genus	Species
+399741	Serratia proteamaculans 568	Bacteria		Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Serratia	Serratia proteamaculans
+467705	Streptococcus gordonii str. Challis substr. CH1	Bacteria		Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus gordonii
+458234	Francisella tularensis subsp. holarctica FTNF002-00	Bacteria		Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Francisella	Francisella tularensis
+360105	Campylobacter curvus 525.92	Bacteria		Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter curvus
+360109	Campylobacter jejuni subsp. doylei 269.97	Bacteria		Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter jejuni
+349747	Yersinia pseudotuberculosis IP 31758	Bacteria		Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Yersinia	Yersinia pseudotuberculosis
+381754	Pseudomonas aeruginosa PA7	Bacteria		Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas aeruginosa
+426430	Staphylococcus aureus subsp. aureus str. Newman	Bacteria		Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus aureus
+435590	Bacteroides vulgatus ATCC 8482	Bacteria		Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides vulgatus
+435591	Parabacteroides distasonis ATCC 8503	Bacteria		Bacteroidetes	Bacteroidia	Bacteroidales	Tannerellaceae	Parabacteroides	Parabacteroides distasonis
