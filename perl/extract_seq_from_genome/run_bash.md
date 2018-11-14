@@ -62,6 +62,11 @@ open IN2,"genome.fa"||die;
 open OUT,">test.out.v2.fa"||die;
 
 my %hash;
+while(<IN1>){
+    chomp;
+    $hash{$_}=$_;
+}
+
 $/=">"; # 设置以">"符号为分割符
 while(<IN2>){
       next unless (my ($id,$seq) = /(.*?)\n(.*)/s);
