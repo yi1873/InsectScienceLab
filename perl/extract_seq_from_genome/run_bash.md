@@ -1,6 +1,6 @@
 提取序列/tab信息
 ================
-November 14, 2018
+November 15, 2018
 
 select.pl
 =========
@@ -47,3 +47,80 @@ perl select.pl -cls line -l ../extract_tab_from_tableinfo/id.list \
     ## perl: warning: Falling back to the standard locale ("C").
 
 -   在extract\_tab\_from\_tableinfo目录下会生成结果test.out.txt
+
+R markdown支持perl脚本运行
+==========================
+
+-   根据id提取序列
+
+``` perl
+#!/usr/bin/perl -w
+use strict;
+
+open IN1,"id.list"||die;
+open IN2,"genome.fa"||die;
+open OUT,">test.out.v2.fa"||die;
+
+my %hash;
+$/=">"; # 设置以">"符号为分割符
+while(<IN2>){
+      next unless (my ($id,$seq) = /(.*?)\n(.*)/s);
+      my $id2=(split(/\s/,$id))[0];
+      $seq =~ s/[\d\s>]//g;
+      if(exists $hash{$id2}){
+            print OUT ">$id2\n$seq\n";
+      }
+}
+$/="\n";
+
+close IN1;
+close IN2;
+close OUT;
+```
+
+    ## perl: warning: Setting locale failed.
+    ## perl: warning: Please check that your locale settings:
+    ##  LC_ALL = (unset),
+    ##  LC_CTYPE = "en_CN.UTF-8",
+    ##  LANG = "en_CN.UTF-8"
+    ##     are supported and installed on your system.
+    ## perl: warning: Falling back to the standard locale ("C").
+
+-   根据id按行提取tab格式信息
+
+``` perl
+#!/usr/bin/perl -w
+use strict;
+
+open IN1,"../extract_tab_from_tableinfo/id.list"||die;
+open IN2,"../extract_tab_from_tableinfo/species_taxonomy.txt"||die;
+open OUT,">../extract_tab_from_tableinfo/test.out.v2.txt"||die;
+
+my %hash;
+while(<IN1>){
+    chomp;
+    $hash{$_}=$_;
+}
+
+while(<IN2>){
+    chomp;
+    my @info=split(/\t/);
+    if(exists $hash{$info[0]}){
+        print OUT "$_\n";
+    }else{
+        next;
+    }
+}
+
+close IN1;
+close IN2;
+close OUT;
+```
+
+    ## perl: warning: Setting locale failed.
+    ## perl: warning: Please check that your locale settings:
+    ##  LC_ALL = (unset),
+    ##  LC_CTYPE = "en_CN.UTF-8",
+    ##  LANG = "en_CN.UTF-8"
+    ##     are supported and installed on your system.
+    ## perl: warning: Falling back to the standard locale ("C").
