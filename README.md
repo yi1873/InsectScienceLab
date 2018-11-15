@@ -20,7 +20,8 @@
 * [venn绘图](https://github.com/yi1873/InsectScienceLab/blob/master/perl/venn/example.sh)
 
 ## python scripts
-* [split_fasta.py](https://github.com/yi1873/InsectScienceLab/blob/master/python/split_fasta/example.sh): 将fasta格式文件切成多份，在blast比对时可将文件切成多份同时比对，可加快比对速度；
+* [split_fasta.py](https://github.com/yi1873/InsectScienceLab/blob/master/python/split_fasta/example.sh): 将fasta格式文件切成多份，在blast比对时可将文件切成多份同时比对，可加快比对速度;
+* [JGI网站爬虫](https://github.com/yi1873/InsectScienceLab/blob/master/python/extractJGI_taxon/extractJGI_taxon.md)
 
 ## R 
 * Rmd为R markdown格式，用Rstudio可直接打开点击Knit运行；前提是将所依赖代码、文件放在同一目录；
