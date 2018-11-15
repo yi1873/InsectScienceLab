@@ -1,0 +1,3798 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<html>
+	<head>
+
+
+<title> JGI GOLD | Organism</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<!--  cupertino theme is bluish smoothness is grey--> 
+
+	<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/js/jqueryui/themes/redmond/jquery-ui.min.css" />
+	<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/js/jqueryui/themes/redmond/jquery.ui.theme.css" />	
+
+<!--  <script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery-1.12.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery-jeditable.min.js"></script> 
+
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/geba.js"></script>
+
+<!--  include the treeetable files -->
+<!-- <script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.treetable/jquery.treetable.js"></script> -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.treetable/jquery.treetable.min.js"></script>
+<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/js/jquery.treetable/stylesheets/jquery.treetable.theme.default.css" />
+
+<!--  include the tablesort files -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery_tablesorter/jquery.tablesorter.min.js"></script>
+<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/js/jquery_tablesorter/themes/blue/style.css" />
+
+<!-- jquery migrate - adds back features that were removed in jquery releases. This needed for the hashchange.js -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.migrate.1.2.1.min.js"></script>
+<!--  include the jquery hashchange, support for tabs in back button  -->
+<!-- <script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.hashchange.js"></script> -->
+<!-- replace the hashchange with jquery.address plugin for jquery 1.12 -->
+<!--<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.address-1.5/jquery.address-1.5.js"></script> -->
+
+<!--  include the jquery jsTree -->
+<!-- <script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jsTree/jstree.js"></script> -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jsTree/jstree.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://gold.jgi.doe.gov:443/js/jsTree/themes/default/style.css" media="all">
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/gold.jstree.js?1.1"></script>
+
+<!--  jquery scroll to plugin -->
+<!-- <script src="https://gold.jgi.doe.gov:443/js/jquery.scrollto/lib/jquery-scrollto.js"></script> -->
+<script src="https://gold.jgi.doe.gov:443/js/jquery.scrollto/lib/jquery-scrollto.min.js"></script>
+
+<!--  jquery form validation -->
+<script src="https://gold.jgi.doe.gov:443/js/jquery.validation/dist/jquery.validate.min.js"></script>
+
+<!--  jquery dropdate picker, time picker -->
+<script src="https://gold.jgi.doe.gov:443/js/jquery-dropdate-picker/jquery-dropdate.js"></script>
+<script src="https://gold.jgi.doe.gov:443/js/jquery-dropdate-picker/date.format.js"></script>
+<script src="https://gold.jgi.doe.gov:443/js/jquery-timepicker/jquery.timepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://gold.jgi.doe.gov:443/js/jquery-timepicker/jquery.timepicker.min.css" media="all">
+
+<!--  http://loopj.com/jquery-tokeninput/ ajax call to web service for suggestions -->
+<!-- <script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.tokensuggest/src/jquery.tokeninput.js"></script> -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery.tokensuggest/src/jquery.tokeninput.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://gold.jgi.doe.gov:443/js/jquery.tokensuggest/styles/token-input.css" />
+	
+<!--  jquery linked selects -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jquery_chained.min.js"></script>
+
+<!--  dropdownmenu -->
+<link rel="stylesheet" type="text/css" href="https://gold.jgi.doe.gov:443/js/dropmenu/dropmenu.styles.css" />
+
+<!--  javascript spinner icon -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/jsspinner/spin.min.js"></script>
+
+<!--  include the GOLD jquery calls in one central file -->
+<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/gold.jquery.js?v=1"></script>
+
+<!--  JGI Favicon -->
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+
+<link href="https://gold.jgi.doe.gov:443/css/main.css" rel="stylesheet" type="text/css" />
+<!-- 
+<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/css/media.css" type="text/css" media="Screen" />
+<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/css/media.css" type="text/css" media="handheld" />
+ -->
+ 
+<!-- responsive css progress bar -->
+ <link rel="stylesheet" href="https://gold.jgi.doe.gov:443/css/progress_bar/css/style.css" media="screen" type="text/css" />
+
+<!--  google analytics  -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7740339-6']); //UA-103780959-1 old: UA-7740339-6
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga2');
+
+  ga2('create', 'UA-103780959-1', 'auto');
+  ga2('send', 'pageview');
+
+</script>
+
+
+
+
+	<link rel="stylesheet" href="https://gold.jgi.doe.gov:443/css/entity/main.css" />
+	<script type="text/javascript" src="https://gold.jgi.doe.gov:443/js/entity/main.js"></script>
+	
+	<!-- inline edits JS include -->
+	
+
+
+
+
+
+
+<script type="text/javascript">
+//the methods to allow inline editing of the CVs
+jQuery(function ($) {
+
+	
+	
+	
+  $('.inLineEdit').editable('rest/inlineedit/inlineOrganism', {
+	 indicator 	: "Saving...",
+	 name 		: "updateValue",
+	 tooltip   	: "Click to Edit",
+	 method		: "PUT",
+	 event     	: "click",
+	 id			: "inLineElement",
+	 submitdata : {"Organism.Organism Id": "471766"},
+	 //JQuery plugin needs a default character available.
+	 placeholder : "&nbsp;"
+		 //cssclass: 'inlineedit' 
+	       
+  });
+
+
+});
+
+</script>
+	
+
+
+
+
+
+
+<script type="text/javascript">
+
+		
+
+//});
+
+//for onload methods...
+$(document).ready(function() { 
+
+	
+    
+	
+});
+
+
+
+//add the ajax functions
+
+
+jQuery.extend({
+	
+	
+});
+</script> 
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+	
+		$("#altitudeRow").hide();	
+	
+	
+	$("#addPackage").on('click', function(){ 
+		//this.remove();
+		if(confirm("Clicking OK will add  Package specific metadata fields.")){
+			$('#updateToPackage').submit();
+		}
+	});
+		
+		$(".slidingDivPhenotype").hide();
+    	$(".show_hide_phenotype").show();
+
+    	$('.show_hide_phenotype').click(function(){
+    	$(".slidingDivPhenotype").slideToggle();
+    	});
+
+    	$(".slidingDivMetabolism").hide();
+    	$(".show_hide_metabolism").show();
+
+    	$('.show_hide_metabolism').click(function(){
+    	$(".slidingDivMetabolism").slideToggle();
+    	});
+
+    	$(".slidingDivEnergySources").hide();
+    	$(".show_hide_energysources").show();
+
+    	$('.show_hide_energysources').click(function(){
+    	$(".slidingDivEnergySources").slideToggle();
+    	});
+    	
+    	$(".slidingDivBodyProducts").hide();
+    	$(".show_hide_bodyproducts").show();
+
+    	$('.show_hide_bodyproducts').click(function(){
+    	$(".slidingDivBodyProducts").slideToggle();
+    	});
+
+    	$(".slidingDivBioticRelationship").hide();
+    	$(".show_hide_bioticrelationship").show();
+
+    	$('.show_hide_bioticrelationship').click(function(){
+    	$(".slidingDivBioticRelationship").slideToggle();
+    	});
+
+    	$(".slidingDivCellArrangements").hide();
+    	$(".show_hide_cellarrangements").show();
+
+    	$('.show_hide_cellarrangements').click(function(){
+    	$(".slidingDivCellArrangements").slideToggle();
+    	});
+
+    	$(".slidingDivHabitat").hide();
+    	$(".show_hide_habitat").show();
+
+    	$('.show_hide_habitat').click(function(){
+    	$(".slidingDivHabitat").slideToggle();
+    	});
+    	
+   	 
+    	$(".editCollectionDate").hide();
+    	$(".show_hide_editCollectionDate").show();
+
+    	$('.show_hide_editCollectionDate').click(function(){
+    	$(".editCollectionDate").slideToggle();
+    	});
+    	
+    	$(".slidingDivPublication").hide();
+	    $(".show_hide_publication").show();
+
+	    $('.show_hide_publication').click(function(){
+	    $(".slidingDivPublication").slideToggle();
+	    });
+	    
+	    $(".slidingDivCultureEdit").hide();
+		 $(".show_hide_cultureedit").show();
+
+		 $('.show_hide_cultureedit').click(function(event){
+			$(".slidingDivCultureEdit").slideToggle();
+		 	event.preventDefault();
+		 });
+		 
+		 $(".slidingDivElRange").hide();
+		 $(".show_hide_elrange").show();
+
+		 $('.show_hide_elrange').click(function(event){
+			$(".slidingDivElRange").slideToggle();
+		 	event.preventDefault();
+		 });
+		 
+		   $(".slidingDivElRangeSoil").hide();
+		 $(".show_hide_elrangesoil").show();
+
+		 $('.show_hide_elrangesoil').click(function(event){
+			$(".slidingDivElRangeSoil").slideToggle();
+		 	event.preventDefault();
+		 });
+		 
+		 $(".slidingDivAltRange").hide();
+		 $(".show_hide_altrange").show();
+
+		 $('.show_hide_altrange').click(function(event){
+			$(".slidingDivAltRange").slideToggle();
+		 	event.preventDefault();
+		 });
+		 
+		 $(".slidingDivDepthRange").hide();
+		 $(".show_hide_depthrange").show();
+
+		 $('.show_hide_depthrange').click(function(){
+			$(".slidingDivDepthRange").slideToggle();
+		 	event.preventDefault();
+		 });
+		 
+		  $(".slidingDivDepthRangeSoil").hide();
+		 $(".show_hide_depthrangesoil").show();
+
+		 $('.show_hide_depthrangesoil').click(function(){
+			$(".slidingDivDepthRangeSoil").slideToggle();
+		 	event.preventDefault();
+		 });
+		 
+    	$("#photo-upload-dialog").hide();
+    	
+    	$("#addNewPublication").on("keypress", ":input:not(textarea):not([type=submit])", function(event) { 
+    	    return event.keyCode != 13;
+    	});
+    	
+    	$("#orgDeleteButton").on('click', function(){ 
+			//this.remove();
+			if(confirm("Delete this Organism")){
+				$('#deleteThisOrganism').submit();
+			}
+		});
+    	
+    	$(".Subsurface, .Altitude, .Depth").on('hover', function(){ 
+			//alert("Yes");
+			$(this).css("display", "block");
+		}).mouseleave(function(){ 
+			//alert("Yes");
+			$(this).css("display", "inline");
+		})
+    	
+	});
+    </script>
+
+<!-- GOOGLE MAPS FOR THE PAGE LOCATION MAP -->
+<!-- maps api key under jabertsch@lbl.gov account:  AIzaSyB3EmIPLpJEBBJFbiSm3Gh7Qnl7CV_nxUo -->
+<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3EmIPLpJEBBJFbiSm3Gh7Qnl7CV_nxUo&libraries=places">    
+ </script>
+
+<script type="text/javascript">
+ function initializeMap(lat, long, message) {
+	 var map;
+    
+    var myLatlng = new google.maps.LatLng(lat, long);
+    var myOptions = {
+      zoom: 7,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+      
+    };
+    
+   map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+   //center = myLatLong;
+    var infowindow = new google.maps.InfoWindow({ 
+    	//content:message + long + lat,
+   	     //   size: new google.maps.Size(50,50)
+   	     });
+    
+    var marker = new google.maps.Marker({
+        position: myLatlng, 
+        map: map, 
+        title:message
+    }); 
+   google.maps.event.addListener(marker, 'click', function() {
+       infowindow.open(map,marker);
+   });
+
+  }
+</script>
+
+<script type="text/javascript">
+       function initializeGeocode() {
+        	var address = (document.getElementById('geocodeMe'));
+        	//alert("address: " + address);
+        	var autocomplete = new google.maps.places.Autocomplete(address);
+        	autocomplete.setTypes(['geocode']);
+        	google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            	var place = autocomplete.getPlace();
+            	if (!place.geometry) {
+                	return;
+           		 }
+
+        	var address = '';
+        	if (place.address_components) {
+            	address = [
+                	(place.address_components[0] && place.address_components[0].short_name || ''),
+                	(place.address_components[1] && place.address_components[1].short_name || ''),
+                	(place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+        	}
+     	});
+	}
+
+	function codeAddress() {
+    	geocoder = new google.maps.Geocoder();
+    	
+    	if(!document.getElementById("geocodeMe").value) {
+    		alert("You did not enter an address");
+    	} else {
+    		var address = document.getElementById("geocodeMe").value;
+    		geocoder.geocode( { 'address': address}, function(results, status) {
+      			if (status == google.maps.GeocoderStatus.OK) {
+
+      				if(results[0].geometry.location.lat() != "") {
+      					alert("Latitude: "+roundToFour(results[0].geometry.location.lat()) );
+      					alert("Longitude: "+roundToFour(results[0].geometry.location.lng()) );
+      				}
+      			}  else {
+        		alert("Geocode was not successful for the following reason: " + status);
+      			}
+    		});
+    	}
+  	}
+	
+google.maps.event.addDomListener(window, 'load', initializeGeocode);
+
+function roundToFour(num) {    
+    return +(Math.round(num + "e+4")  + "e-4");
+}
+ </script>
+
+<script>
+
+	$(document).ready(function(){
+		
+		
+
+
+
+
+		//JQUERY ecosystem selector elements
+		$("#EcosystemCategory").remoteChained({
+	    		parents : "#ecosystem",
+	    		url : "rest/ecoselects/ecosystemcatV2"
+	    		//clear : true
+	    });
+
+	   	 $("#EcosystemType").remoteChained({
+	    	parents : "#ecosystem, #EcosystemCategory",
+	    	url : "rest/ecoselects/ecosystemtypeV2"
+	    	//clear : true
+	    });
+
+	    $("#EcosystemSubtype").remoteChained({
+	    	parents : "#ecosystem, #EcosystemCategory, #EcosystemType",
+	    	url : "rest/ecoselects/ecosystemsubtypeV2"
+	    	//clear : true
+	    });
+
+	    $("#SpecificEcosystem").remoteChained({
+	    	parents : "#ecosystem, #EcosystemCategory, #EcosystemType, #EcosystemSubtype",
+	    	url : "rest/ecoselects/specificecosystemV2"
+	    	//clear : true
+	    });
+	    
+	    //---END ecosystem selectors
+	    
+	    //JQUERY new path ecosystem selector elements
+	    //for the admin page to add new paths
+		$("#addEcosystemCategory").remoteChained({
+	    		parents : "#addEcosystem",
+	    		url : "rest/ecoselects/ecosystemcatAdd",
+	    		//clear : true,
+	    		loading : "Loading..."
+	    	});
+
+	   	 $("#addEcosystemType").remoteChained({
+	    	parents : "#addEcosystem, #addEcosystemCategory",
+	    	url : "rest/ecoselects/ecosystemtypeAdd",
+	    	//clear : true,
+	    	loading : "Loading..."
+	    });
+
+	    $("#addEcosystemSubtype").remoteChained({
+	    	parents : "#addEcosystem, #addEcosystemCategory, #addEcosystemType",
+	    	url : "rest/ecoselects/ecosystemsubtypeAdd",
+	    	//clear : true,
+	    	loading : "Loading..."
+	    });
+
+	    $("#addSpecificEcosystem").remoteChained({
+	    	parents : "#addEcosystem, #addEcosystemCategory, #addEcosystemType, #addEcosystemSubtype",
+	    	url : "rest/ecoselects/specificecosystemAdd",
+	    	//clear : true,
+	    	loading : "Loading..."
+	    });
+	    
+	    //---END new path ecosystem selectors
+	
+	});
+	
+	
+</script>
+
+</head>
+
+<body>
+		
+
+
+
+
+
+
+	<div id="header">
+
+		<div class="jgiLogo" id="jgiLogo">
+			<a href="https://gold.jgi.doe.gov:443"><img src="https://gold.jgi.doe.gov:443/images/logo-JGI-IMG-GOLD.png" width="480" height="70" 
+			alt="DOE Joint Genome Institute's GOLD logo"/></a> 
+			<span id="homeLinkSpan"><a href="http://jgi.doe.gov">JGI HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	 
+				<a href="/goldlogin">LOG IN</a>
+				
+			</span>
+		
+	
+  		<span id="loginWelcome"> 
+  
+			</span>
+ 		</div>
+ 		<div class="headerMessage" style="color:red;"></div>	
+ 	</div>
+ 	
+ 	
+ 	
+ 	<div id="navBar" name="nav_bar">
+	
+		<ul> 
+			<li><a href="/index">Home</a></li>
+			
+			<li><a href="/search">Search</a>
+				<ul>
+					<li><a href="/search">Advanced Search</a></li>
+					<li><a href="/metadatasearch">Metadata Search</a></li>
+				</ul>
+			</li>
+			<li><a href="/distribution">Distribution Graphs</a></li>
+			<li><a href="/genomemap">Biogeographical Metadata</a>
+				<ul>
+					<!-- <li><a href="/genomemap">Clustered Biosample Distribution Map</a></li> -->
+					<li><a href="/genomeearth">Biosample Distribution Map</a></li>
+					<li><a href="/organismmap">Organism Distribution Map</a></li>
+				</ul>
+			</li>
+			<li><a href="/sraexplorer">SRA Explorer</a></li>
+			<li><a href="/statistics">Statistics</a></li>
+			<li><a href="/usagepolicy">GOLD Usage Policy</a></li>
+			<li><a href="/contactus">Team</a></li>
+			<li><a href="/help">Help</a></li>
+			<li><a href="/news">News</a></li>
+			
+			
+		</ul>
+ 	</div>
+		
+
+
+
+
+
+
+<div id="sidebar">
+	<table id="projectsCount2">
+	<tbody>
+
+		<tr>
+			<td>
+			
+				<span id="tooltip" title="Study is an umbrella Project and represents the list of sequencing projects that are part of the original research proposal. Proposal is a synonym to Study. Examples: HMP study, or GEBA study.">Studies  
+				<img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="top">
+				</span>
+			
+			</td>
+			<td align="right">
+				<a href="/studies" class="blackLink" >33529</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			
+				<span id="tooltip" title="Biosample is the original isolation place of the physical sample, from where the DNA was isolated. It is usually the description of the environment from where the sample was taken. In the case of isolate genomes where the sample isolation environment is not known, the name of the organism may be the Biosample name. Biosample is nothing more than metadata on the sequencing project. However, due to the fact that all DNA samples are coming from a Biosample and because under one Biosample, several different DNA samples may be extracted, it is forming a level above Seq Project.">Biosamples  
+				<img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="top">
+				</span>
+			
+			</td>
+			<td align="right">
+				<a href="/biosamples" class="blackLink" >52738</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			
+				<span id="tooltip" title="Sequencing Project is the individual organism or sample that is targeted for sequencing. An individual genome project may be composed of more than one sequencing reactions and/or sequencing technologies. A sequencing project may be an isolate genome, or a Metagenome sample, or a transcriptome, or a metatranscriptome, or a 16S survey, etc. From a single Biosample, multiple different sequencing projects may be performed. For JGI projects, one sequencing project must always be correlated with a single SPID.">Sequencing Projects  
+				<img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="top">
+				</span>
+			
+			</td>
+			<td align="right">
+				<a href="/projects" class="blackLink" >234485</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			
+				<span id="tooltip" title="Analysis Project is the informatics processing of a Sequencing Project. It describes how the assembly and annotation of a Sequencing Project were performed. Individual submissions in IMG represent individual Analysis Projects.">Analysis Projects  
+				<img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="top">
+				</span>
+			
+			</td>
+			<td align="right">
+				<a href="/analysis_projects" class="blackLink" >187683</a>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			
+			     Organisms
+			
+			</td>
+			<td align="right">
+				<a href="/organisms" class="blackLink" >325398</a>
+			</td>
+		</tr>
+
+	</tbody>
+	</table>
+	
+	
+
+
+
+</div>
+		<div id="body">
+		
+		<div id="orgTabs">
+			<ul>
+
+		<li><a href="#OrganismInformation">Organism Information</a></li>		
+
+		<li><a href="#NCBITaxonomy">NCBI Taxonomy</a></li>		
+
+		<li><a href="#OrganismMetadata">Organism Metadata</a></li>		
+
+		<li><a href="#IsolationMetadata">Isolation Metadata</a></li>		
+
+		<li><a href="#EnvironmentalMetadata">Environmental Metadata</a></li>		
+
+			</ul>
+			
+			<div id="spinner"></div>
+			<div id="formMsg"></div>
+			
+			
+
+			<div id="OrganismInformation">
+				<table class="entity" cellspacing="1">
+			
+
+		
+		<tr>
+			<td align="center">&nbsp;
+			
+			</td>
+			<td>&nbsp;
+			
+			</td>
+			</tr>
+			
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+							ORGANISM INFORMATION
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          GOLD Organism ID
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Go0471766<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="The organism name includes Genus, species, strain"> Organism Name
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			Camelina sativa MTSD_RIL281<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Other Names
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Common Name
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Source is NCBI's Taxonomy: http://www.ncbi.nlm.nih.gov/taxonomy/"> NCBI Taxonomy ID
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<a href="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=90675" class="blackLink">90675</a><br/>
+			<div id="ncbiTaxonomyEditDiv" style="margin-left: 50px; margin-top:5px;"></div>
+		
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Domain
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			EUKARYAL<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Phylum
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			PLANTS-STREPTOPHYTA<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Applies only to cultured organisms"> Genus
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			Camelina<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Genus Synonyms
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Please use one of the following formats: Pseudomonas mendocina or Prevotella sp. F0091 "> Species
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			Camelina sativa<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Species Synonyms
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Serovar
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			MTSD_RIL281<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Strain
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Subspecies
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Type Strain
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Culture Collection
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Organism Type
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Natural<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Cultured
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Yes<br/>
+			
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Culture Type
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Isolate<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Comments
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Biosafety Level
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Strain Info ID
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+	    	 <a class="blackLink" href="http://www.straininfo.net/strains/" target="new">
+				          </a><br />
+		
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Provided from NamesforLife: https://service.namesforlife.com"> Taxon DOI
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Provided from NamesforLife: https://service.namesforlife.com"> Exemplar DOI
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Provided from NamesforLife: https://service.namesforlife.com"> Exemplar Name
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Genbank 16S ID
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+				 <a class="blackLink" href="http://www.ncbi.nlm.nih.gov/nuccore/" target="new">
+				   </a><br />
+				   <div id="genbank16sIdEditDiv" style="margin-left: 50px; margin-top:5px;"></div>
+		
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Is Public
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Yes<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Last Modified By
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+				
+				
+				
+				
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Related Sequencing Projects
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<a href="/projects?Organism.GOLD+Organism+ID=Go0471766" class="blackLink">1</a><br/>
+		
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Related Analysis Projects
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+				<a href="/analysis_projects?Organism.GOLD+Organism+ID=Go0471766" class="blackLink"></a><br/>
+				
+					</td>
+				</tr>
+
+				</table>
+		
+			</div>
+
+			<div id="NCBITaxonomy">
+				<table class="entity" cellspacing="1">
+			
+
+		
+		<tr>
+			<td align="center">&nbsp;
+			
+			</td>
+			<td>&nbsp;
+			
+			</td>
+			</tr>
+			
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+							NCBI TAXONOMY
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Organism Name
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Camelina sativa<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Source is NCBI's Taxonomy: http://www.ncbi.nlm.nih.gov/taxonomy/"> NCBI Tax ID
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<a href="http://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=90675" class="blackLink">90675</a><br/>
+			<div id="" style="margin-left: 50px; margin-top:5px;"></div>
+		
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Superkingdom
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Eukaryota<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Kingdom
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Viridiplantae<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Phylum
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Streptophyta<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Class
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Order
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Brassicales<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Family
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Brassicaceae<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Genus
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Camelina<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          NCBI Species
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			Camelina sativa<br/>
+
+					</td>
+				</tr>
+
+				</table>
+		
+			</div>
+
+			<div id="OrganismMetadata">
+				<table class="entity" cellspacing="1">
+			
+
+		
+		<tr>
+			<td align="center">&nbsp;
+			
+			</td>
+			<td>&nbsp;
+			
+			</td>
+			</tr>
+			
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+							ORGANISM METADATA
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Cell Diameter
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Cell Shape
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Color
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Gram Stain
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Motility
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Oxygen Requirement
+			          
+			           (<span class="greenText">MIGS-22</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          pH
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Salinity
+			          
+			           (<span class="greenText">MIGS-6.3</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Pressure
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Sporulation
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Ex. Glucose, Lactose, Methanol, dissolved carbon dioxide, Starch, Crude Oil etc."> Carbon Source
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Biotic Relationships
+			          
+			           (<span class="greenText">MIGS-14</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Temperature Optimum
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Temperature Range
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Cell Length
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Commercial Strain
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Commercial Strain Comments
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Cell Arrangements
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Diseases
+			          
+			           (<span class="greenText">MIGS-15</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Habitats
+			          
+			           (<span class="greenText">MIGS-6</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Metabolism
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Phenotypes
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Energy Sources
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+				</table>
+		
+			</div>
+
+			<div id="IsolationMetadata">
+				<table class="entity" cellspacing="1">
+			
+
+		
+		<tr>
+			<td align="center">&nbsp;
+			
+			</td>
+			<td>&nbsp;
+			
+			</td>
+			</tr>
+			
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+							COLLECTION DATE
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="the date the sample was collected"> Collection Date
+				      	
+				     	  (<span class="greenText">MIGS-5</span>) 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+7/15/2017
+					</td>
+				</tr>
+
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+							ORGANISM ISOLATION
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="publication describing the sample collection"> Sample Isolation Publication
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="The site where the sample was collected. Eg. Plant root, human skin etc."> Sample Collection Site
+				      	
+				     	  (<span class="greenText">MIGS-13</span>) 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Isolation Country
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+					<br/>
+				
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Sample Isolation Comments
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Method of sample collection like serial dilution, selection on minimal media, enrichment etc."> Sample Collection Method
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="name of the person who collected the sample"> Contact Name
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="email of the person who collected the sample"> Contact Email
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+				</table>
+		
+			</div>
+
+			<div id="EnvironmentalMetadata">
+				<table class="entity" cellspacing="1">
+			
+
+		
+		<tr>
+			<td align="center">&nbsp;
+			
+			</td>
+			<td>&nbsp;
+			
+			</td>
+			</tr>
+			
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+						   <span id="tooltip" title=" GOLD's Ecosystem based classification as described in: http://www.ncbi.nlm.nih.gov/pubmed/20653767"> 
+						   ECOSYSTEM CLASSIFICATION  
+				           <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">      
+				           </span>
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Ecosystem
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Ecosystem Category
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Ecosystem Type
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Ecosystem Subtype
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Specific Ecosystem
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+					<tr>
+					
+						<th colspan="2">
+					
+
+						
+							ENVIRONMENTAL INFORMATION
+						
+						
+						
+						
+						</th>
+					</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Eg. USA: San Diego, California"> Geographic Location
+				      	
+				     	  (<span class="greenText">MIGS-4</span>) 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Enter verified if the geographic coordinates were actully captured at sampling event. If determined after sampling even by Google maps etc. enter inferred "> LatLong Information
+				      	
+				     	 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Enter latitude and longitude geographic coordinates as decimal fractions. Do not enter in degrees, minutes and seconds format."> Latitude
+				      	
+				     	  (<span class="greenText">MIGS-4.1</span>) 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+				      <span id="tooltip" title="Enter latitude and longitude geographic coordinates as decimal fractions. Do not enter in degrees, minutes and seconds format."> Longitude
+				      	
+				     	  (<span class="greenText">MIGS-4.2</span>) 
+				      <img src="https://gold.jgi.doe.gov:443/images/toolbar_get_info.png" height="16px" width="16px" align="bottom">
+				      	
+				      </span>
+			         
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Geographical Map
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+				No mapping data available.
+				
+					</td>
+				</tr>
+
+			
+				<tr id="altitudeRow">
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Altitude
+			          
+			           (<span class="greenText">MIGS-4.4</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<div class="inLineEdit Altitude" id="Organism.Altitude"  style="display: inline"> </div> 
+			
+				<br />
+				<button id="addAltRange" class="show_hide_altrange">Edit Altitude/Range</button>
+				<form id="submitAltRange">
+				<div id="slidingDivAltRange" class="slidingDivAltRange">
+				From: <input type="text" name="altitude" id="altitude" size="8" value=""> Meters.
+					
+				To: <input type="text" name="altitude2" id="altitude2" size="8" value=""> Meters.
+				
+				<input type="hidden" name="organismId" value="471766">
+				<input type="button" id="doAltRangeSubmit" value="Submit Altitude/Range">
+				</div>
+				</form>
+				
+					</td>
+				</tr>
+
+			
+				<tr id="elevationRow">
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Elevation
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<div class="inLineEdit Elevation" id="Organism.Elevation"  style="display: inline"> </div> 
+
+				<br />
+				<button id="addElevationRange" class="show_hide_elrange">Edit Elevation/Range</button>
+				<form id="submitElRange">
+				<div id="slidingDivElRange" class="slidingDivElRange">
+				From: <input type="text" name="elevation" id="elevation" size="8" value=""> Meters.
+					
+				To: <input type="text" name="elevation2"  id="elevation2" size="8" value=""> Meters.
+				
+				
+				<input type="hidden" name="organismId" value="471766">
+				<input type="button" id="doElRangeSubmit" value="Submit Elevation/Range">
+				</div>
+				</form>
+				
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Depth
+			          
+			           (<span class="greenText">MIGS-4.3</span>) 
+			          
+			          
+					</td>
+					<td>
+
+			<div class="inLineEdit Depth" id="Organism.Depth"  style="display: inline"> </div> 
+				
+				<br />
+				<button id="addDepthRange" class="show_hide_depthrange">Edit Depth/Range</button>
+				<form id="submitDepthRange">
+				<div id="slidingDivDepthRange" class="slidingDivDepthRange">
+				From: <input type="text" name="depth" id="depth" size="8" value=""> Meters.
+				
+					
+				To: <input type="text" name="depth2"  id="depth2" size="8" value=""> Meters.
+				
+				<input type="hidden" name="organismId" value="471766">
+				<input type="button" id="doDepthRangeSubmit" value="Submit Depth/Range">
+				</div>
+				</form>
+				
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Subsurface Depth
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<div class="inLineEdit" id="Organism.Subsurface Depth"> </div> 
+			
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Sample Collection Temperature
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Chlorophyll Concentration
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Nitrate Concentration
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Oxygen Concentration
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Salinity Concentration
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Methane Concentration (mmol)
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Sample Conductivity
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Growth Conditions
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Bicarbonate Concentration (mM)
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Soluble Iron Concentration (uM)
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Hydrogen Sulfide Concentration (mM)
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Hydrogen Sulfide Presence
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          Irradiance
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal Ocean
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal Isolation
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal Station
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal WOA Temperature
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal WOA Salinty
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal WOA Oxygen
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal WOA Silicate
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal WOA Phosphate
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+			
+				<tr>
+				
+						<td nowrap="nowrap" class="rowTitle">
+					
+					
+					 
+			          ProPortal WOA Nitrate
+			          
+			          
+			          
+			          
+					</td>
+					<td>
+
+			<br/>
+
+					</td>
+				</tr>
+
+				</table>
+		
+			</div>
+
+		</div>
+		
+		
+
+</div>
+
+		
+
+
+
+<div id="footer">
+	<div style="float:left; background-color:inherit;">
+	<a href="http://jgi.doe.gov/disclaimer/" class="blackLink">Disclaimer</a> <br />
+	<!-- <a href="http://www.jgi.doe.gov/whoweare/disclaimer.html"  class="blackLink">Disclaimer</a> --> 
+	<a href="/contactus" class="blackLink">Credits</a> <br />
+	<a href="/help" class="blackLink">Contact</a><br />
+	<a href="http://jgi.doe.gov/accessibility-section-508-statement/">Accessibility / Section 508 Statement</a><br /><br />
+	&copy;1997-2018  The Regents of the University of California <br />
+	</div>
+	
+	<div style="float:right; background-color:inherit;">
+	<a href="http://www.lbl.gov/" target="_self" title="Berkeley Lab"><img src="https://gold.jgi.doe.gov:443/images/LBNL-JGI-logo.png" 
+ width="131" height="102" alt="lbnl logo" 
+	 /></a><br />
+	<a href="http://science.energy.gov/"><img src="https://gold.jgi.doe.gov:443/images/doe_officeofscience_logo.png" 
+	alt="DOE logo" name="doe_officeofscience_logo"/></a>
+	</div>
+	
+	<div id="sessionWarning" title="Result">
+  		<p>&nbsp;</p>
+  		<p>&nbsp;</p>
+  		<p>
+  		<span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>
+ 		<div id="sessionMessage" class="messages"></div>
+  		</p>
+  		
+	</div>
+</div>
+
+		
+		
+<div id="photo-upload-dialog" title="Upload Organism Image">
+  <form name="photoUploadForm" id="photoUploadForm" action="uploadImage" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <p>&nbsp;</p>
+      <label for="Image File">Image File</label>
+      <input type="file" name="file" id="file" value="Select Image..." class="text ui-widget-content ui-corner-all">
+       <label for="Image Title">Image Title</label>
+      <input type="text" name="imageName" id="imageName" value="" >
+      <input type="hidden" name="organismId" id="organismId" value="471766" >
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+		
+<script>
+
+
+
+
+
+$(document).ready(function(){
+
+    $(document).ready(function(){
+
+    	
+    	//ECOSYSTEMS
+    	$( "#submitEcosystem" ).validate({
+    			rules: {
+    				"Ecosystem": "required", 
+    				"Ecosystem Category": "required"
+    			},
+
+    			submitHandler: function(form) {
+    				//alert("RES:: Here");
+    				
+    			$( "#submitEcosystem" ).submitToEcosystemWS();
+    	  		},
+    	  		errorClass: "validationErrorClass"
+    		
+    	});
+
+    });
+
+	
+	//DISEASES
+	$(".remDisease").on('click', function(){ 
+		if(confirm("Remove " + this.id + " disease from the Organsim")){
+			var divToRemove = "#disease"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'disease', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	
+	 $('#addNewDisease').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	}); 
+
+	$("#addNewDiseaseButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismDisease';
+		var appendButton = addNewDiseaseButton;
+		var dataFormId = addNewDiseases;
+		$("#addNewDiseaseButton").submitNewElementToWS(url, appendButton, dataFormId);
+    });
+
+	//PHENOTYPES
+	$(".remPhenotype").on('click', function(){ 
+		if(confirm("Remove " + this.id + " phenotype from the Organsim")){
+			var divToRemove = "#phenotype"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'phenotype', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewPhenotype').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	$("#addNewPhenotypeButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismPhenotype';
+		var appendButton = addNewPhenotypeButton;
+		var dataFormId = addNewPhenotypes;
+		$("#addNewPhenotypeButton").submitNewElementToWS(url, appendButton, dataFormId);
+    });
+
+	//METABOLISM
+	$(".remMetabolism").on('click', function(){ 
+		if(confirm("Remove " + this.id + " metabolism from the Organsim")){
+			var divToRemove = "#metabolism"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'metabolism', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewMetabolism').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	$("#addNewMetabolismButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismMetabolism';
+		var appendButton = addNewMetabolismButton;
+		var dataFormId = addNewMetabolisms;
+		$("#addNewMetabolismButton").submitNewElementToWS(url, appendButton, dataFormId);
+    });
+
+
+	//BODY PRODUCTS
+	$(".remBodyProducts").on('click', function(){ 
+		if(confirm("Remove " + this.id + " Body Product from the Organsim")){
+			var divToRemove = "#bodyproducts"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'bodyproducts', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewBodyProducts').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	$("#addNewBodyProductsButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismBodyProducts';
+		var appendButton = addNewBodyProductsButton;
+		var dataFormId = addNewBodyProduct;
+		$("#addNewBodyProductsButton").submitNewElementToWS(url, appendButton, dataFormId);
+		
+    });
+
+	//ENERGY SORCES
+	$(".remEnergySources").on('click', function(){ 
+		if(confirm("Remove " + this.id + " Energy Source from the Organsim")){
+			var divToRemove = "#energysources"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'energysources', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewEnergySources').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	$("#addNewEnergySourcesButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismEnergySources';
+		var appendButton = addNewEnergySourcesButton;
+		var dataFormId = addNewEnergySource;
+		$("#addNewEnergySourcesButton").submitNewElementToWS(url, appendButton, dataFormId);
+    });
+
+	//Cell Arrangements
+	$(".remCellArrangements").on('click', function(){ 
+		if(confirm("Remove " + this.id + " Cell Arrangement from the Organsim")){
+			var divToRemove = "#cellarrangements"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'cellarrangement', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewCellArrangements').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	
+	$("#addNewCellArrangementsButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismCellArrangements';
+		var appendButton = addNewCellArrangementsButton;
+		var dataFormId = addNewCellArrangement;
+		$("#addNewCellArrangementsButton").submitNewElementToWS(url, appendButton, dataFormId);
+
+    });
+
+	//Biotic RelationshipS
+	$(".remBioticRelationship").on('click', function(){ 
+		if(confirm("Remove " + this.id + " Biotic Relationship from the Organsim")){
+			var divToRemove = "#BioticRelationship"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'bioticrelationship', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewBioticRelationships').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	
+	$("#addNewBioticRelationshipButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismBioticRelationships';
+		var appendButton = addNewBioticRelationshipButton;
+		var dataFormId = addNewBioticRelationship;
+		$("#addNewBioticRelationshipButton").submitNewElementToWS(url, appendButton, dataFormId);
+
+    });
+
+	//HABITATS
+	$(".remHabitat").on('click', function(){ 
+		if(confirm("Remove " + this.id + " Habitat from the Organsim")){
+			var divToRemove = "#Habitat"+this.id;
+			$(divToRemove).remove();
+			$(this).deleteElement(this.id, 'habitat', 'rest/inlineedit/delOrganismMultiElement');
+		}
+	});
+	$('#addNewHabitat').live('click', function(){
+	  		var $this = $(this),
+	      	$parentTR = $this.closest('tr');
+	  		$parentTR.clone().insertAfter($parentTR);
+	});
+	
+	$("#addNewHabitatButton").on('click', function() {
+
+		var url = 'rest/inlineedit/addOrganismElements';
+		var appendButton = addNewHabitatButton;
+		var dataFormId = addNewHabitats;
+		var classId = 'habitatid';
+		$('<input>').attr({type: 'hidden',id: 'elementTable',name: 'elementTable', 
+			value: 'habitat'}).appendTo(appendButton);
+		$("#addNewHabitatButton").submitNewElementToWS(url, appendButton, dataFormId, classId);
+
+    });
+	
+	
+	$("[id^=doDepthRangeSubmit]").on("click", function() {
+		
+		var submitElId = $(this).attr('id');
+		var depth;
+		var depth2;
+		
+		if(submitElId == "doDepthRangeSubmit") {
+		
+			depth = $("#depth").val();
+			depth2 = $("#depth2").val();
+			
+		} else if(submitElId == "doDepthRangeSubmitSoil") {
+			depth = $("#soilDepth").val();
+			depth2 = $("#soilDepth2").val();
+		}
+		
+		if(!$("#doDepthRangeSubmit").checkAltElDepthValues(depth, depth2)) {
+    		return false;
+    	 } else {
+			$("#submitDepthRange").submitDepthRangeToWS(depth, depth2);
+    		
+    	 }
+		return false;
+		
+		
+	});
+	
+	//add alt range
+	$("#doAltRangeSubmit").on("click", function() {
+		var alt = $("#altitude").val();
+		var alt2 = $("#altitude2").val();
+		
+		if(!$("#doAltRangeSubmit").checkAltElDepthValues(alt, alt2)) {
+			//alert("No GOOD");
+    		return false;
+    	 } else {
+    		 
+			$("#submitAltRange").submitAltRangeToWS();
+    	 }
+		return false;
+		
+		
+		
+	});
+	
+	$("[id^=doElRangeSubmit]").on("click", function() {
+		
+		var el;
+		var el2;
+		var submitElId = $(this).attr('id');
+		
+		if(submitElId == "doElRangeSubmit") {
+			el = $("#elevation").val();
+			el2 = $("#elevation2").val();
+		} else if(submitElId == "doElRangeSubmitSoil") {
+			el = $("#soilElevation").val();
+			el2 = $("#soilElevation2").val();
+		}
+		//alert("Update elevation");
+		if(!$("#doElRangeSubmit").checkAltElDepthValues(el, el2)) {
+			//alert("No GOOD");
+    		return false;
+    	 } else {
+    		 //alert("Update elevation2");
+			$("#submitElRange").submitElRangeToWS(el, el2);
+    	 }
+		return false;
+		
+	});
+		
+	
+	//update the temp field
+	$("#updateTemperature").on("click", function() {
+		var temperatureUnit = $('select[id="temperatureUnit"]').val();
+		var growthTemperature = $('input[id="GrowthTemperature"]').val();
+		$("#updateTemperatureForm").submitTemperatureToWS(temperatureUnit, growthTemperature);
+	});
+	
+	$("#submitOrganismPubMedId").on('click', function() {
+		$("#submitOrganismPubMedId").submitNewPubmedIdToWS();
+    });
+	
+	$("#uploadImageButton").on('click', function() {
+		//imageSelectionPopup();
+		$( "#photo-upload-dialog" ).dialog({
+		      resizable: false,
+		      height: 350,
+		      width: 400,
+		      modal: true,
+		      show: {
+		          effect: "fade",
+		          duration: 500
+		        },
+		        hide: {
+		          effect: "fade",
+		          duration: 1000
+		        },
+		      buttons: {
+		        "Upload Image": function() {
+		          alert("Upload Image");
+		          $( "#photoUploadForm" ).submit();
+		          $( this ).dialog( "close" );
+		        },
+		        Cancel: function() {
+		          $( this ).dialog( "close" );
+		        }
+		      }
+		 });
+	});
+	
+	
+	//image uploader
+	 function imageSelectionPopup() {
+    	  var w = window.open('', '', 'width=500,height=300,top=100,left=150,resizeable,'
+    			  +'scrollbars,location=0,toolbar=0');
+    	  w.document.write("<html><body>");
+    	  w.document.write("<table height=\"95%\" cellpadding=\"5\">");
+    	  w.document.write("<tr>");
+    	  w.document.write("<td width=\"30%\" bgcolor=\"yellow\" rowspan=\"2\">");
+    	  w.document.write("side");
+    	  w.document.write("</td>");
+    	  w.document.write("<td bgcolor=\"#CCCCCC\">");
+    	  w.document.write("Image selection and upload form");
+    	  w.document.write("<form action=\"uploadImage\" method=\"post\" enctype=\"multipart/form-data\">");
+    	  w.document.write("<input type=\"file\" name=\"file\" /> <br\><br\>");
+    	  w.document.write("<input type=\"hidden\" name=\"organismId\" id=\"organismId\" value=\"471766\" />");
+    	  w.document.write("<input type=\"submit\" value=\"Upload image\" onSubmit=\"javascript: self.close()\"/>");
+    	  w.document.write("</form>");
+    	  w.document.write("</td>");
+    	  w.document.write("</tr>");
+    	  w.document.write("</table>");
+    	  w.document.write("</body></html>");
+    	  w.document.close(); 
+    }
+    
+	//progressbar
+	var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+      },
+      complete: function() {
+        progressLabel.text( "Complete!" );
+      }
+    });
+
+    
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+ 
+      progressbar.progressbar( "value", val + 2 );
+ 
+      if ( val < 99 ) {
+        setTimeout( progress, 80 );
+      }
+    }
+ 
+    setTimeout( progress, 2000 );
+	///
+	});
+
+jQuery.fn.extend({
+
+		deleteElement: function (data, tableName, url) {
+							
+							$.ajax({
+								url: url,
+								type: 'put',
+								dataType: 'text',
+								data: "elementValue=" + data + "&elementTable=" + tableName + "&organismId=471766",
+								success: function(res, sta, xhr) {
+							   // alert("RES:: " + res);
+							   $("#header").ScrollTo(0);
+							   $('#formMsg').html("<span class=\"formMsg\">" +
+					               		"<br />"+ res +"</span>");
+							   
+					           	//reload the page from the server...
+					           $('#formMsg').html("<span class=\"formMsg\">Reloading Page </span>");
+					    	       	startSpinnner();
+						            setTimeout(function (){
+						           	location.reload(true); 
+					            }, 1500);
+									                          
+								},
+								error: function(xhr) {
+									//alert("MSG " + xhr.responseText);
+									$("#header").ScrollTo(0);
+									$('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>");
+									//$( "#formMsg" ).ScrollTo();
+								}
+							});
+
+							return false;
+							},
+
+		submitNewElementToWS: function(url, appendButton, dataFormId, className) {
+
+					$('<input>').attr({type: 'hidden',id: 'organism_id',name: 'organism_id', 
+						value: 471766}).appendTo(appendButton);
+					//get field that is the new element name and append as a elementValue param
+					var elList = $( dataFormId ).find('.' + className + ' option:selected').map(function() {return this.value;}).get().join(',');
+					//alert("element:" + elList);
+					$('<input>').attr({type: 'hidden',id: 'elementValues',name: 'elementValues', value: elList}).appendTo(dataFormId);
+					
+					$.ajax({
+						url: url,
+						type: 'put',
+						dataType: 'text',
+						data: $(dataFormId).serialize(),
+						success: function(res, sta, xhr) {
+						   $("#formMsg").ScrollTo();
+						   //alert("RES:: " + res);
+						   $('#formMsg').html("<span class=\"formMsg\">" +
+				               		"<br />"+ res +"</span>");
+						   
+				           	//reload the page from the server...
+				           $('#formMsg').html("<span class=\"formMsg\">Reloading Page </span>");
+				           	startSpinnner();
+				            setTimeout(function (){
+				            	location.reload(true); 
+				            }, 1500);
+				                          
+					},
+						error: function(xhr) {
+						//alert("MSG " + xhr.responseText);
+						 $('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>");
+						 $( "#formMsg" ).ScrollTo();
+						}
+					});
+
+					return false;
+
+				},
+
+		submitToEcosystemWS: function () {
+
+			    		//alert("RES:: Here2");
+			    		
+			    	var url = 'rest/inlineedit/EcosystemsV2';
+
+			    	$.ajax({
+			    		url: url,
+			    		type: 'put',
+			    		dataType: 'text',
+			    		data: $('#submitEcosystem').serialize(),
+			    		success: function(res, sta, xhr) {
+			    			   // alert("RES:: " + res);
+			    			   //
+			    				$('#ecoFormMsg').html("<span class=\"ecoFormMsg\">" +
+			                   		"<br />"+ res +"</span>");
+
+			    				$( "#ecoFormMsg" ).ScrollTo();
+
+			                   	//reload the page from the server...
+			                    location.reload(true);
+			                    
+			        },
+			        	error: function(xhr) {
+			        		//alert("MSG " + xhr.responseText);
+			        		$('#ecoFormMsg').html("<span class=\"ecoFormMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>")
+			        	}
+			    	});
+			    	
+			    	
+			    	
+			    	return false;
+
+			    		
+			    	//});
+
+		},
+		
+		submitNewPubmedIdToWS: function () {
+			var url = 'rest/inlineedit/addOrganismPubMedId';
+
+	    	$.ajax({
+	    		url: url,
+	    		type: 'put',
+	    		dataType: 'text',
+	    		data: $('#addNewPublication').serialize(),
+	    		success: function(res, sta, xhr) {
+	    			   $('#formMsg').html("<span class=\"formMsg\">" +
+	                   		"<br />"+ res +"</span>");
+
+	    				$( "#formMsg" ).ScrollTo();
+	                    location.reload(true);
+	        },
+	        	error: function(xhr) {
+	        		//alert("MSG " + xhr.responseText);
+	        		$('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>")
+	        	}
+	    	});
+	    	
+	    	return false;
+
+		},
+		
+		submitTemperatureToWS: function (temperatureUnit, growthTemperature) {
+			var url = 'rest/inlineedit/updateGrowthTemperature';
+			//alert("TEMP: " + temperatureUnit + " -- unit: " + growthTemperature);
+	    	$.ajax({
+	    		url: url,
+	    		type: 'put',
+	    		dataType: 'text',
+				data: "temperatureUnit=" + temperatureUnit + "&growthTemperature=" + growthTemperature + "&organismId=471766",
+	    		success: function(res, sta, xhr) {
+	    			   //$('#formMsg').html("<span class=\"formMsg\">" +
+	                   //		"<br />"+ res +"</span>");
+
+	    				//$( "#formMsg" ).ScrollTo();
+	                    location.reload(true);
+	        },
+	        	error: function(xhr) {
+	        		//alert("MSG " + xhr.responseText);
+	        		$('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>")
+	        	}
+	    	});
+	    	
+	    	return false;
+
+		},
+		
+		submitDepthRangeToWS: function (depth, depth2) {
+			
+			//alert("DEPTH3: " + depth);
+			
+			var url = 'rest/inlineedit/doDepthRange';
+			
+	    	$.ajax({
+	    		url: url,
+	    		type: 'post',
+	    		dataType: 'text',
+				//data: $('#submitDepthRange').serialize(),
+				data: "depth="+ depth + "&depth2=" + depth2 + "&organismId=" + 471766,
+	    		success: function(res, sta, xhr) {
+	    				$("#formMsg").ScrollTo();
+					   var obj = JSON.parse(res);
+					   $('#formMsg').html("<span class=\"formMsg\">" +
+			               		"<br />"+ obj.msg +"</span>");
+					   //alert("Made it");
+			           	//reload the page from the server...
+			           $('#formMsg').html("<span class=\"formMsg\">Reloading Page </span>");
+			           	startSpinnner();
+			            setTimeout(function (){
+			            	location.reload(true); 
+			            }, 1500);
+			            
+	        },
+	        	error: function(xhr) {
+	        		//alert("MSG " + xhr.responseText);
+	        		$('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>")
+	        	}
+	    	});
+			
+	    	
+	    	return false;
+		},
+		
+		submitAltRangeToWS: function () {
+			var url = 'rest/inlineedit/doAltRange';
+			//alert("Just update the depth range already");
+			
+	    	$.ajax({
+	    		url: url,
+	    		type: 'post',
+	    		dataType: 'text',
+				data: $('#submitAltRange').serialize(),
+	    		success: function(res, sta, xhr) {
+	    				$("#formMsg").ScrollTo();
+					   var obj = JSON.parse(res);
+					   $('#formMsg').html("<span class=\"formMsg\">" +
+			               		"<br />"+ obj.msg +"</span>");
+					   
+			           	//reload the page from the server...
+			           $('#formMsg').html("<span class=\"formMsg\">Reloading Page </span>");
+			           	startSpinnner();
+			            setTimeout(function (){
+			            	location.reload(true); 
+			            }, 1500);
+			            
+	        },
+	        	error: function(xhr) {
+	        		//alert("MSG " + xhr.responseText);
+	        		$('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>")
+	        	}
+	    	});
+			
+	    	
+	    	return false;
+		},
+		
+		
+		submitElRangeToWS: function (el, el2) {
+			var url = 'rest/inlineedit/doElRange';
+			//alert("function:: " + el + " -- " + el2);
+	    	$.ajax({
+	    		url: url,
+	    		type: 'post',
+	    		dataType: 'text',
+				//data: $('#submitElRange').serialize(),
+				data: "elevation="+ el + "&elevation2=" + el2 + "&organismIdId=" + 471766,
+	    		success: function(res, sta, xhr) {
+	    				$("#formMsg").ScrollTo();
+					   var obj = JSON.parse(res);
+					   $('#formMsg').html("<span class=\"formMsg\">" +
+			               		"<br />"+ obj.msg +"</span>");
+					   //alert("Made it");
+			           	//reload the page from the server...
+			           $('#formMsg').html("<span class=\"formMsg\">Reloading Page </span>");
+			           	startSpinnner();
+			            setTimeout(function (){
+			            	location.reload(true); 
+			            }, 1500);
+			            
+	        },
+	        	error: function(xhr) {
+	        		//alert("MSG " + xhr.responseText);
+	        		$('#formMsg').html("<span class=\"formMsg\"><br /> Submission failed - "+ xhr.responseText +"</span>")
+	        	}
+	    	});
+			
+	    	
+	    	return false;
+		}
+	
+	    	
+	    });
+  </script>
+	</body>
+</html>
