@@ -15,7 +15,9 @@ output: github_document
 * R markdown支持bash命令运行，linux命令可直接在Rmd运行
 
 ```{bash, echo = F, warning = F}
-rm -r data/rnaseq
+rm -rf data/rnaseq
+rm -f data/fasta.tar.gz
+rm -f dtat/test.fa.gz
 ```
 
 ## cd / ls
@@ -90,14 +92,16 @@ gunzip data/test.fa.gz  # 解压data目录下的压缩文件，原文件不保�
 ls data  # test.fa.gz已被解压
 ```
 ```{bash}
-gzip -c data/fasta.fa.gz  data/test.fa  # 将data目录下的test.fa压缩为fasta.fa.gz,同时保留原文件
-ls data  # fasta.fa.gz 与 test.fa同在
+gzip -c data/test.fa > data/test.fa.gz  # 将data目录下的test.fa压缩为fasta.fa.gz,同时保留原文件
+ls data  # test.fa.gz 与 test.fa同在
 ```
 
 ## tar
-
+* tar同样是文件压缩工具
 ```{bash}
 tar -zcvf data/fasta.tar.gz data/test.fa # tar压缩文件
 ls data
+```
+```{bash}
 tar -zxvf data/fasta.tar.gz  # tar解压文件
 ```
