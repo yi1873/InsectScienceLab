@@ -160,6 +160,7 @@ ls data  # test.fa.gz已被解压
 ```{bash}
 gzip -c data/test.fa > data/test.fa.gz  # 将data目录下的test.fa压缩为fasta.fa.gz,同时保留原文件
 ls data  # test.fa.gz 与 test.fa同在
+rm data/test.fa.gz
 ```
 
 ## tar
@@ -170,11 +171,7 @@ ls data
 ```
 ```{bash, warning = F}
 tar -zxvf data/fasta.tar.gz  # tar解压文件
-```
-```{bash, echo = F, warning = F}
-rm -rf data/rnaseq
 rm -f data/fasta.tar.gz
-rm -f dtat/test.fa.gz
 ```
 
 

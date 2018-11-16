@@ -22,11 +22,9 @@ cd data  # 进入到data目录
 ls -l    # 查看data目录下的文件(-l列出详细信息)
 ```
 
-    ## total 32
-    ## -rw-r--r--  1 lxz  staff    62 Nov 16 11:12 example.sh
+    ## total 16
     ## -rw-r--r--  1 lxz  staff    78 Nov 16 14:17 id.list
     ## -rw-r--r--  1 lxz  staff  2688 Nov 16 11:12 test.fa
-    ## -rw-r--r--  1 lxz  staff   900 Nov 16 14:54 test.fa.gz
 
 ``` bash
 cd ../   # 返回上一级目录
@@ -57,10 +55,8 @@ cp data/test.fa data/test.v2.fa   # 将test.fa复制为test.v2.fa
 ls data   # 查看data下的文件
 ```
 
-    ## example.sh
     ## id.list
     ## test.fa
-    ## test.fa.gz
     ## test.v2.fa
 
 mv
@@ -73,10 +69,8 @@ mv data/test.v2.fa data/test.v3.fa  # 重命名为test.v3.fa
 ls data
 ```
 
-    ## example.sh
     ## id.list
     ## test.fa
-    ## test.fa.gz
     ## test.v3.fa
 
 rm
@@ -89,10 +83,8 @@ rm data/test.v3.fa  #删除data目录下test.v3.fa
 ls data  # 查看data下的文件
 ```
 
-    ## example.sh
     ## id.list
     ## test.fa
-    ## test.fa.gz
 
 ln
 --
@@ -104,11 +96,9 @@ ln -s data/test.fa data/fasta.fa    # 在data目录下创建一个快捷方式
 ls  data
 ```
 
-    ## example.sh
     ## fasta.fa
     ## id.list
     ## test.fa
-    ## test.fa.gz
 
 ``` bash
 rm data/fasta.fa    # 删除data目录的fasta.fa软链接 
@@ -124,11 +114,9 @@ mkdir -p data/rnaseq # 在data目录创建一个名为rnaseq的目录
 ls data
 ```
 
-    ## example.sh
     ## id.list
     ## rnaseq
     ## test.fa
-    ## test.fa.gz
 
 split
 -----
@@ -277,11 +265,8 @@ gzip data/test.fa   # 压缩data目录下的test.fa文件，原文件不保留
 ls data  # test.fa文件已被压缩
 ```
 
-    ## gzip: data/test.fa.gz already exists -- skipping
-    ## example.sh
     ## id.list
     ## rnaseq
-    ## test.fa
     ## test.fa.gz
 
 ``` bash
@@ -289,19 +274,16 @@ gunzip data/test.fa.gz  # 解压data目录下的压缩文件，原文件不保�
 ls data  # test.fa.gz已被解压
 ```
 
-    ## gunzip: data/test.fa already exists -- skipping
-    ## example.sh
     ## id.list
     ## rnaseq
     ## test.fa
-    ## test.fa.gz
 
 ``` bash
 gzip -c data/test.fa > data/test.fa.gz  # 将data目录下的test.fa压缩为fasta.fa.gz,同时保留原文件
 ls data  # test.fa.gz 与 test.fa同在
+rm data/test.fa.gz
 ```
 
-    ## example.sh
     ## id.list
     ## rnaseq
     ## test.fa
@@ -319,15 +301,14 @@ ls data
 
     ## tar: Failed to set default locale
     ## a data/test.fa
-    ## example.sh
     ## fasta.tar.gz
     ## id.list
     ## rnaseq
     ## test.fa
-    ## test.fa.gz
 
 ``` bash
 tar -zxvf data/fasta.tar.gz  # tar解压文件
+rm -f data/fasta.tar.gz
 ```
 
     ## tar: Failed to set default locale
