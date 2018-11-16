@@ -24,8 +24,7 @@ ls -l    # 查看data目录下的文件(-l列出详细信息)
 
     ## total 24
     ## -rw-r--r--  1 lxz  staff    62 Nov 16 11:12 example.sh
-    ## -rw-r--r--  1 lxz  staff  1034 Nov 16 13:15 fasta.tar.gz
-    ## drwxr-xr-x  2 lxz  staff    64 Nov 16 13:15 rnaseq
+    ## -rw-r--r--  1 lxz  staff  1034 Nov 16 13:26 fasta.tar.gz
     ## -rw-r--r--  1 lxz  staff  2688 Nov 16 11:12 test.fa
 
 ``` bash
@@ -35,7 +34,6 @@ ls       # 查看目录
 
     ## command_for_Bioinformatics
     ## fastq2fasta
-    ## test.v3.fa
 
 pwd
 ---
@@ -60,7 +58,6 @@ ls data   # 查看data下的文件
 
     ## example.sh
     ## fasta.tar.gz
-    ## rnaseq
     ## test.fa
     ## test.v2.fa
 
@@ -76,7 +73,6 @@ ls data
 
     ## example.sh
     ## fasta.tar.gz
-    ## rnaseq
     ## test.fa
     ## test.v3.fa
 
@@ -92,7 +88,6 @@ ls data  # 查看data下的文件
 
     ## example.sh
     ## fasta.tar.gz
-    ## rnaseq
     ## test.fa
 
 ln
@@ -108,7 +103,6 @@ ls  data
     ## example.sh
     ## fasta.fa
     ## fasta.tar.gz
-    ## rnaseq
     ## test.fa
 
 ``` bash

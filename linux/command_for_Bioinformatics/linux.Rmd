@@ -14,6 +14,10 @@ output: github_document
 * Copied from [生信信息常用30个Linux命令系列](https://mp.weixin.qq.com/s/vaizJyXOdHK2_DA0utpiTA)
 * R markdown支持bash命令运行，linux命令可直接在Rmd运行
 
+```{bash, echo = F, warning = F}
+rm -r data/rnaseq
+```
+
 ## cd / ls
 
 * cd：Change directory
