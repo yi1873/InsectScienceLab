@@ -1,0 +1,99 @@
+
+---
+title: "Linux commands"
+author: "xiang_zhi_@126.com"
+date: '`r format(Sys.time(), "%B %d, %Y")`'
+output: github_document
+---
+
+
+# Information
+
+* 学习生物信息，Linux是必须掌握的内容，其实常用的Linux命令也就30个左右，而且这些命令都是单词的简写，记忆起来并不困难。
+* 命令不用死记，遇到使用的命令百度用法即可，如 linux gzip ...
+* Copied from [生信信息常用30个Linux命令系列](https://mp.weixin.qq.com/s/vaizJyXOdHK2_DA0utpiTA)
+* R markdown支持bash命令运行，linux命令可直接在Rmd运行
+
+## cd / ls
+
+* cd：Change directory
+* ls：List files
+*修改工作目录，cd和ls应该是使用最多的两个命令。
+
+```{bash}
+cd data  # 进入到data目录
+ls -l    # 查看data目录下的文件(-l列出详细信息)
+```
+
+```{bash}
+cd ../   # 返回上一级目录
+ls       # 查看目录
+```
+
+## pwd
+* pwd: print working directory
+```{bash}
+pwd   # 显示当前工作目录
+```
+
+## cp
+* cp: Copy file
+```{bash}
+cp data/test.fa data/test.v2.fa   # 将test.fa复制为test.v2.fa
+ls data   # 查看data下的文件
+```
+
+## mv
+* mv: Move file 移动文件，相当于windows下的剪切粘贴，如果剪切粘贴到同一目录下，则为重命名。
+```{bash}
+mv data/test.v2.fa data/test.v3.fa  # 重命名为test.v3.fa
+ls data
+```
+
+## rm
+* rm: Remove file 删除文件
+```{bash}
+rm data/test.v3.fa  #删除data目录下test.v3.fa
+ls data  # 查看data下的文件
+```
+
+## ln
+* ln: Link files 创建连接文件
+```{bash}
+ln -s data/test.fa data/fasta.fa    # 在data目录下创建一个快捷方式
+ls  data
+```
+
+```{bash}
+rm data/fasta.fa    # 删除data目录的fasta.fa软链接 
+```
+
+## mkdir
+* mkdir：Make directory 创建文件夹
+```{bash}
+mkdir -p data/rnaseq # 在data目录创建一个名为rnaseq的目录 
+ls data
+```
+
+## g(un)zip
+* gzip是文件压缩工具，默认直接对源文件进行处理
+```{bash}
+gzip data/test.fa   # 压缩data目录下的test.fa文件，原文件不保留
+ls data  # test.fa文件已被压缩
+```
+```{bash}
+gunzip data/test.fa.gz  # 解压data目录下的压缩文件，原文件不保留
+ls data  # test.fa.gz已被解压
+```
+```{bash}
+gzip -c data/fasta.fa.gz  data/test.fa  # 将data目录下的test.fa压缩为fasta.fa.gz,同时保留原文件
+ls data  # fasta.fa.gz 与 test.fa同在
+```
+
+## tar
+
+```{bash}
+tar -zcvf data/fasta.tar.gz data/test.fa # tar压缩文件
+ls data
+tar -zxvf data/fasta.tar.gz  # tar解压文件
+```
