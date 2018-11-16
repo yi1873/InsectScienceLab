@@ -5,7 +5,7 @@
 * 不定期持续更新
 
 ## Linux
-* [生信常用到的linux命令](https://github.com/yi1873/InsectScienceLab/blob/master/linux/command_for_Bioinformatics/linux_commands.md)
+* [生信常用到的linux命令](https://github.com/yi1873/InsectScienceLab/blob/master/linux/command_for_Bioinformatics/linux.md)
 * [fastq2fasta awk实现](https://github.com/yi1873/InsectScienceLab/blob/master/linux/fastq2fasta/example.sh)
 
 ## perl scripts
