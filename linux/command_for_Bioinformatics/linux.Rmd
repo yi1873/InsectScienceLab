@@ -1,7 +1,7 @@
 
 ---
 title: "Linux commands"
-author: "xiang_zhi_@126.com"
+author: "xiang_zhi_@126.com" 
 date: '`r format(Sys.time(), "%B %d, %Y")`'
 output: github_document
 ---
@@ -81,6 +81,72 @@ mkdir -p data/rnaseq # 在data目录创建一个名为rnaseq的目录
 ls data
 ```
 
+## split
+* split 文件分割
+```{bash}
+split -l 2 data/id.list data/id.   # 对id.list按每个文件两行进行切份，以'data/id.'为输出前缀, 'data/'代表路径
+ls data/id.*  # 查看切份文件
+```
+
+## cat 
+* cat: concatenate 连接
+* cat的一个作用是查看文件，一般是比较小的文件，行数小于一个屏幕，最多不要超过两个屏幕，否则会刷屏；
+* cat另一个作用是合并多个文件，一般配合重定向合并为一个新文件或者将一个文件内容追加到另一个文件结尾。
+```{bash}
+cat data/id.aa data/id.ab data/id.ac > data/all.id  # 将多个文件合并
+cat data/all.id   # 打id.list文件打印至屏幕
+rm -f data/id.a* data/all.id
+```
+
+## less
+* less 查看文件，按q退出 
+```{bash}
+less data/id.list  # 查看文件
+```
+
+## more
+* more也是查看工具
+```{bash}
+more data/id.list
+```
+
+## wc 
+* wc为计数工具
+```{bash}
+wc data/id.list  # 对id.list进行计数
+```
+```{bash}
+less data/id.list | wc -l    # wc -l只统计行数; '|'为管道符，使用频率非常高，可理解为next；
+```
+
+## grep
+* grep对fasta文件计数
+```{bash}
+less data/test.fa | grep '>' | wc -l  # fasta格式以'>'开头，只需提取'>'计数即可
+```
+* grep为提取特征值
+```{bash}
+less data/id.list | grep 'gene4' # 提取含'gene4'字符的行； '|'管道符在后面命令中会经常用到
+```
+
+```{bash}
+less data/id.list | grep -v 'gene4'  # 提取不含'gene4'行
+```
+
+```{bash}
+less data/id.list | grep -v 'gene4' | wc -l  # 先提取不含'gene4'行，再计数；使用两次管道符
+```
+
+```{bash}
+less data/id.list | egrep  'gene4|gene6'  # 提取含'gene4'或'gene6'行
+```
+
+## sed
+* 字符替换工具
+```{bash}
+less data/id.list | sed 's/gene/GENE/'   # 将'gene'替换为'GENE'
+```
+
 ## g(un)zip
 * gzip是文件压缩工具，默认直接对源文件进行处理
 ```{bash}
@@ -98,10 +164,17 @@ ls data  # test.fa.gz 与 test.fa同在
 
 ## tar
 * tar同样是文件压缩工具
-```{bash}
+```{bash, warning = F}
 tar -zcvf data/fasta.tar.gz data/test.fa # tar压缩文件
 ls data
 ```
-```{bash}
+```{bash, warning = F}
 tar -zxvf data/fasta.tar.gz  # tar解压文件
 ```
+```{bash, echo = F, warning = F}
+rm -rf data/rnaseq
+rm -f data/fasta.tar.gz
+rm -f dtat/test.fa.gz
+```
+
+

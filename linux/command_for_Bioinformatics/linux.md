@@ -22,9 +22,11 @@ cd data  # 进入到data目录
 ls -l    # 查看data目录下的文件(-l列出详细信息)
 ```
 
-    ## total 16
+    ## total 32
     ## -rw-r--r--  1 lxz  staff    62 Nov 16 11:12 example.sh
+    ## -rw-r--r--  1 lxz  staff    78 Nov 16 14:17 id.list
     ## -rw-r--r--  1 lxz  staff  2688 Nov 16 11:12 test.fa
+    ## -rw-r--r--  1 lxz  staff   900 Nov 16 14:54 test.fa.gz
 
 ``` bash
 cd ../   # 返回上一级目录
@@ -56,7 +58,9 @@ ls data   # 查看data下的文件
 ```
 
     ## example.sh
+    ## id.list
     ## test.fa
+    ## test.fa.gz
     ## test.v2.fa
 
 mv
@@ -70,7 +74,9 @@ ls data
 ```
 
     ## example.sh
+    ## id.list
     ## test.fa
+    ## test.fa.gz
     ## test.v3.fa
 
 rm
@@ -84,7 +90,9 @@ ls data  # 查看data下的文件
 ```
 
     ## example.sh
+    ## id.list
     ## test.fa
+    ## test.fa.gz
 
 ln
 --
@@ -98,7 +106,9 @@ ls  data
 
     ## example.sh
     ## fasta.fa
+    ## id.list
     ## test.fa
+    ## test.fa.gz
 
 ``` bash
 rm data/fasta.fa    # 删除data目录的fasta.fa软链接 
@@ -115,8 +125,147 @@ ls data
 ```
 
     ## example.sh
+    ## id.list
     ## rnaseq
     ## test.fa
+    ## test.fa.gz
+
+split
+-----
+
+-   split 文件分割
+
+``` bash
+split -l 2 data/id.list data/id.   # 对id.list按每个文件两行进行切份，以'data/id.'为输出前缀, 'data/'代表路径
+ls data/id.*  # 查看切份文件
+```
+
+    ## data/id.aa
+    ## data/id.ab
+    ## data/id.ac
+    ## data/id.list
+
+cat
+---
+
+-   cat: concatenate 连接
+-   cat的一个作用是查看文件，一般是比较小的文件，行数小于一个屏幕，最多不要超过两个屏幕，否则会刷屏；
+-   cat另一个作用是合并多个文件，一般配合重定向合并为一个新文件或者将一个文件内容追加到另一个文件结尾。
+
+``` bash
+cat data/id.aa data/id.ab data/id.ac > data/all.id  # 将多个文件合并
+cat data/all.id   # 打id.list文件打印至屏幕
+rm -f data/id.a* data/all.id
+```
+
+    ## M37699.gene3
+    ## AY528718.1.gene4
+    ## AF091113.2.gene6
+    ## M63556.1.gene9
+    ## M63556.1.gene10
+
+less
+----
+
+-   less 查看文件，按q退出
+
+``` bash
+less data/id.list  # 查看文件
+```
+
+    ## M37699.gene3
+    ## AY528718.1.gene4
+    ## AF091113.2.gene6
+    ## M63556.1.gene9
+    ## M63556.1.gene10
+
+more
+----
+
+-   more也是查看工具
+
+``` bash
+more data/id.list
+```
+
+    ## M37699.gene3
+    ## AY528718.1.gene4
+    ## AF091113.2.gene6
+    ## M63556.1.gene9
+    ## M63556.1.gene10
+
+wc
+--
+
+-   wc为计数工具
+
+``` bash
+wc data/id.list  # 对id.list进行计数
+```
+
+    ##        5       5      78 data/id.list
+
+``` bash
+less data/id.list | wc -l    # wc -l只统计行数; '|'为管道符，使用频率非常高，可理解为next；
+```
+
+    ##        5
+
+grep
+----
+
+-   grep对fasta文件计数
+
+``` bash
+less data/test.fa | grep '>' | wc -l  # fasta格式以'>'开头，只需提取'>'计数即可
+```
+
+    ##        5
+
+-   grep为提取特征值
+
+``` bash
+less data/id.list | grep 'gene4' # 提取含'gene4'字符的行； '|'管道符在后面命令中会经常用到
+```
+
+    ## AY528718.1.gene4
+
+``` bash
+less data/id.list | grep -v 'gene4'  # 提取不含'gene4'行
+```
+
+    ## M37699.gene3
+    ## AF091113.2.gene6
+    ## M63556.1.gene9
+    ## M63556.1.gene10
+
+``` bash
+less data/id.list | grep -v 'gene4' | wc -l  # 先提取不含'gene4'行，再计数；使用两次管道符
+```
+
+    ##        4
+
+``` bash
+less data/id.list | egrep  'gene4|gene6'  # 提取含'gene4'或'gene6'行
+```
+
+    ## AY528718.1.gene4
+    ## AF091113.2.gene6
+
+sed
+---
+
+-   字符替换工具
+
+``` bash
+less data/id.list | sed 's/gene/GENE/'   # 将'gene'替换为'GENE'
+```
+
+    ## M37699.GENE3
+    ## AY528718.1.GENE4
+    ## AF091113.2.GENE6
+    ## M63556.1.GENE9
+    ## M63556.1.GENE10
 
 g(un)zip
 --------
@@ -128,8 +277,11 @@ gzip data/test.fa   # 压缩data目录下的test.fa文件，原文件不保留
 ls data  # test.fa文件已被压缩
 ```
 
+    ## gzip: data/test.fa.gz already exists -- skipping
     ## example.sh
+    ## id.list
     ## rnaseq
+    ## test.fa
     ## test.fa.gz
 
 ``` bash
@@ -137,9 +289,12 @@ gunzip data/test.fa.gz  # 解压data目录下的压缩文件，原文件不保�
 ls data  # test.fa.gz已被解压
 ```
 
+    ## gunzip: data/test.fa already exists -- skipping
     ## example.sh
+    ## id.list
     ## rnaseq
     ## test.fa
+    ## test.fa.gz
 
 ``` bash
 gzip -c data/test.fa > data/test.fa.gz  # 将data目录下的test.fa压缩为fasta.fa.gz,同时保留原文件
@@ -147,6 +302,7 @@ ls data  # test.fa.gz 与 test.fa同在
 ```
 
     ## example.sh
+    ## id.list
     ## rnaseq
     ## test.fa
     ## test.fa.gz
@@ -165,6 +321,7 @@ ls data
     ## a data/test.fa
     ## example.sh
     ## fasta.tar.gz
+    ## id.list
     ## rnaseq
     ## test.fa
     ## test.fa.gz
