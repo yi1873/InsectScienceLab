@@ -7,7 +7,7 @@
 
 # 编程基础入门
 ## Linux
-* 必学项，须熟练操作服务器，记住常用的几个命令即可，
+* 必学项，须熟练操作服务器，记住常用的几个命令即可
 * [生信常用到的linux命令](https://github.com/yi1873/InsectScienceLab/blob/master/linux/command_for_Bioinformatics/linux.md)
 * [fastq2fasta awk实现](https://github.com/yi1873/InsectScienceLab/blob/master/linux/fastq2fasta/example.sh)
 
@@ -42,15 +42,49 @@
   4. **测序** 边合成边测序。反应所需材料，dNTP的3’端特殊处理，不能继续反应，因此每次只能添加一个碱基，另外每个碱基有一种颜色。dNTP添加到链上后，所有未使用游离dNTP和DNA聚合酶会被洗脱掉。接着，再加入激发荧光所需的缓冲液，用激光激发荧光信号，并有光学设备完成荧光信号的记录，最后利用计算机分析将光学信号转化为测序碱基。这样荧光信号记录完成后，再加入化学试剂淬灭荧光信号并去除dNTP 3’-OH保护基团，以便能进行下一轮的测序反应
 
 ## 生信基本知识和概念
+* **reads层面**
+  **reads**  指测序的结果，1条序列一般称为1条reads，一般为fastq格式；
+  **fastq格式**  [示例](https://github.com/yi1873/InsectScienceLab/blob/master/linux/fastq2fasta/test.fastq)
+    FASTQ是基于文本的保存生物序列和其测序质量信息的标准格式。其序列以及质量信息都是使用一个ASCII字符标示，最初由Sanger开发，目的是将FASTA序列与质量数据放到一起，目前已经成为高通量测序结果的事实标准。
+    FASTQ文件中每个序列通常有四行：
+    第一行是序列标识以及相关的描述信息，以‘@’开头；
+    第二行是序列
+    第三行以‘+’开头，后面是序列标示符、描述信息，或者什么也不加
+    第四行是质量信息，和第二行的序列相对应，每一个序列都有一个质量评分，根据评分体系的不同，每个字符的含义表示的数字也不相同。
+  **Q20/Q30**  高通量测序中,每测一个碱基会给出一个相应的质量值,这个质量值是衡量测序准确度的. 碱基的质量值13,错误率为5%, 20的错误率为1%, 30的错误率为0.1%. Q20与Q30则表示质量值大于等于20或30的碱基所占百分比.比如一共测了1G的数据量,其中有0.9G的碱基质量值大于或等于20,那么Q20则为90%. 
+  **k-mer**  将reads分成包含k个碱基的字符串，一般长短为m的reads可以分成m-k+1个k-mers.
+
+
+* **基因组层面**
+  **fasta格式**  [示例](https://github.com/yi1873/InsectScienceLab/blob/master/linux/fastq2fasta/out.fa)
+    fasta格式是最基本的表示序列信息（核苷酸或者蛋白质）的格式。包含id和seq两部分，第一部分是序列的定义行，该行的开头是>符号，紧跟着后面的就是该条序列的名称；第二部分就是序列，所有的序列可以放在一行存储，也可以多行存储。
+  **Contig N50**  Reads拼接后会获得一些不同长度的Contigs.将所有的Contig长度相加,能获得一个Contig总长度.然后将所有的Contigs按照从长到短进行排序,如获得Contig 1,Contig 2,contig 3....将Contig按照这个顺序依次相加,当相加的长度达到Contig总长度的一半时,最后一个加上的Contig长度即为Contig N50.
+    
+
 
 ## 常用数据库
+* nr/nt库
+* kegg库
+* GO库
+* cog库
+
 
 ## 常用生信软件 
+* 质控软件 
+* 比对软件
+  **blast**
+  **diamond**
+  **bwa/bowtie**
+  **k-mer比对软件**  包括kallisto/kraken等
+* 转录组软件 
+* 基因组软件
+* 宏基因组软件
+
 
 ## 生信操作
+* 流程搭建
 
 # 进阶
-
 ## 机器学习
 * [Machine Learning](https://github.com/yi1873/machine_learning) 
 * Books 
