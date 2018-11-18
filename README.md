@@ -24,7 +24,7 @@
 * [JGI网站爬虫](https://github.com/yi1873/InsectScienceLab/blob/master/python/extractJGI_taxon/extractJGI_taxon.md)
 
 ## R scripts
-* R必学，画科非常方便，先从画图入手学；再慢慢提升到数据处理；
+* R必学，画图非常方便，先从画图入手学；再慢慢提升到数据处理；
 * Books
   [R for data science](https://github.com/yi1873/InsectScienceLab/tree/master/R/books)
 * [heatmap](https://github.com/yi1873/InsectScienceLab/blob/master/R/heatmap/heatmap.md)
