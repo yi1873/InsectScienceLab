@@ -46,7 +46,7 @@
 ### 2.2.1 reads层面
 * **reads**  
 ```
-指测序的结果，1条序列一般称为1条reads，一般为fastq格式；
+  指测序的结果，1条序列一般称为1条reads，一般为fastq格式；
 ```
 * **fastq格式**  [示例](https://github.com/yi1873/InsectScienceLab/blob/master/linux/fastq2fasta/test.fastq)
 ```
@@ -66,7 +66,7 @@
 ```
 *  **k-mer**  
 ```
-将reads分成包含k个碱基的字符串，一般长短为m的reads可以分成m-k+1个k-mers.
+  将reads分成包含k个碱基的字符串，一般长短为m的reads可以分成m-k+1个k-mers.
 ```
 
 
@@ -118,7 +118,7 @@
 
 ## 2.6 组学文献阅读
 * 各类组学文章千篇一律，多阅读几篇文献下来就能发现组学文章套路；
-* 转录组文献示例/基因组文献示例/宏基因组文献示例
+* [转录组文献示例](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115196/)/[基因组文献示例](https://www.cell.com/cell/fulltext/S0092-8674(11)01268-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867411012682%3Fshowall%3Dtrue)/[宏基因组文献示例](https://www.nature.com/articles/nature08821)
 
 
 
