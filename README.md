@@ -88,12 +88,51 @@
 
 ## 2.3 常用数据库
 ### 2.3.1 nr/nt库
+* nt (Nucleotide Sequence Database),核酸序列数据库
+* nr (Non-Redundant Protein Sequence Database)非冗余蛋白库 
+```
+  完整的nr/nt 数据库和预先构建好的blast 索引可以从ncbi 的ftp 服务器上下载得到，地址：https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/
+```
 
 ### 2.3.2 kegg库
-
+* Kyoto Encyclopedia of Genes and Genomes [(KEGG)](https://www.kegg.jp/)是综合性功能数据库，最核心的为KEGG PATHWAY和KEGG ORTHOLOGY数据库。
+* KEGG ORTHOLOGY数据库中将行使相同功能的基因聚在一起，称为 Ortholog Groups (KO entries);
+* Blast/Diamond 作blastp比对，取最佳比对结果作KEGG功能注释；
+* KEGG富集分析软件 KOBAS http://kobas.cbi.pku.edu.cn（可下载KEGG数据库）
+```
+  KEGG PATHWAY数据库中包含6类生物代谢通路，分别为:
+      细胞过程（Cellular Processes）
+      环境信息处理（Environmental Information Processing）
+      遗传信息处理（Genetic Information Processing）
+      人类疾病（Human Diseases）
+      新陈代谢（Metabolism）
+      生物体系统（Organismal Systems）
+```
 ### 2.3.3 GO库
+* Gene Ontology [(GO)](http://www.geneontology.org/), 是生物学功能注释的一个标准词汇表术语（GO term）;
+* Blast/Diamond 作blastp比对，取最佳比对结果作GO功能注释；
+```
+  GO是生物学功能注释的一个标准词汇表术语（GO term），将基因的功能分为三部分：
+      1）分子功能（Molecular Function)
+      2）基因所处的细胞组分（Cellular Component）
+      3）基因以及参与的生物学过程（Biological Process）
+```
 
-### 2.3.4 cog库
+### 2.3.4 COG库
+* Clusters of Orthologous Groups [(COG)](http://clovr.org/docs/clusters-of-orthologous-groups-cogs/)即同源蛋白簇，根据细菌、藻类和真核生物完整基因组的编码蛋白系统进化关系分类构建而成。
+* Blast/Diamond 作blastp比对，取最佳比对结果作COG功能注释；
+
+### 2.3.5 SwissProt
+* [SwissProt](https://www.uniprot.org/uniprot/?query=reviewed:yes) 高质量的蛋白数据库，蛋白序列得到实验的验证；
+* 下载链接 http://www.uniprot.org/downloads
+* Blast/Diamond 作blastp比对，取最佳比对结果作SwissPort功能注释;
+
+### 2.3.6 TrEMBL
+* [TrEMBL](https://www.uniprot.org/uniprot/?query=reviewed:no)
+
+### 2.3.7 Pfam
+* Pfam
+* [InterProScan](https://www.ebi.ac.uk/interpro/interproscan.html)作pfam注释;
 
 ## 2.4 常用生信软件 
 ### 2.4.1 质控软件 
@@ -105,6 +144,7 @@
 * bwa
 * kallisto
 * kraken
+
 ### 2.4.3 进化分析软件
 * **fasttree**
 
@@ -119,7 +159,7 @@
 ## 2.6 组学文献阅读
 * 各类组学文章千篇一律，多阅读几篇文献下来就能发现组学文章套路；
 * [转录组文献示例](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4115196/)/[基因组文献示例](https://www.cell.com/cell/fulltext/S0092-8674(11)01268-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867411012682%3Fshowall%3Dtrue)/[宏基因组文献示例](https://www.nature.com/articles/nature08821)
-
+* 杂志订阅 https://feedly.com 
 
 
 ## 3.进阶
